@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        user-select: none;
+      }
+
+      .A {
+        background-color: blue;
+        width: 300px;
+        height: 300px;
+      }
+      .B {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1 class="A">나는 민트</h1>
+    <h1 class="B">나는 블루</h1>
+    <script>
+      let A = document.querySelector(".A");
+      let B = document.querySelector(".B");
+
+      A.addEventListener("mouseup", function () {
+        A.style.backgroundColor = "red";
+      });
+
+      A.addEventListener("mousedown", function () {
+        A.style.backgroundColor = "blue";
+      });
+
+      B.addEventListener("mouseup", function () {
+        B.style.backgroundColor = "blue";
+      });
+
+      B.addEventListener("mousedown", function () {
+        B.style.backgroundColor = "red";
+      });
+    </script>
+  </body>
+</html>

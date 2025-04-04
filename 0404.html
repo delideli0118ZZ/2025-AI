@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="팀1"></h1>
+    <h1 class="팀2"></h1>
+
+    <script>
+        //1.선택한다
+        let 팀1 = document.querySelector(".팀1")
+
+        let 팀2 = document.querySelector(".팀2")
+        
+        //2.조진다
+        팀1.style.color = "pink"
+        팀1.style.backgroundColor = "green"
+        팀1.textContent = "민서 : 레오나"
+
+        팀2.style.color = "aquamarine"
+        팀2.style.backgroundColor = "pink"
+        팀2.textContent = "태준 : 사일러스"
+        
+        function 태준이궁극기() {
+        }
+        //함수는 데이터이다.
+
+        //콜백함수. 변수에 저장 할 수있고, 이름이 없는 함수
+
+        //이벤트리스너 event listener
+        //대상.addEventListener
+        팀1.addEventListener("mouseover", function() {
+            팀1.style.color="gold"
+            console.log("민서네팀 클릭했습니다")
+        })
+        팀1.addEventListener("mouseout", function() {
+            팀1.style.color="black"
+        })
+        팀2.addEventListener("mouseup", function(){
+            팀2.style.backgroundColor="hotpink"
+        })
+        팀2.addEventListener("mousedown", function(){
+            팀2.style.backgroundColor="purple"
+        })
+    </script>
+</body>
+</html>
