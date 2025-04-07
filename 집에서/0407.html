@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="border: 1px solid gray; border-radius: 10px; margin: 10px">
+      <div>
+        <h2 style="margin: 10px">h2</h2>
+      </div>
+      <h2 style="margin: 10px">h2</h2>
+      <div
+        class="I"
+        style="border: 1px solid gray; background-color: rgb(235, 216, 216)"
+      >
+        <a
+          target="_blank"
+          ;
+          style="text-decoration: none"
+          ;
+          class="I"
+          href="https://github.com/delideli0118ZZ/2025-AI/blob/main/0319.html"
+        >
+          <h3 style="margin: 10px; max-width: 122px">0319.html</h3></a
+        >
+      </div>
+      <h2 style="margin: 10px">h2</h2>
+    </div>
+
+    <script>
+      let I = document.querySelector(".I");
+
+      I.addEventListener("mouseover", function () {
+        I.style.backgroundColor = "gray";
+        I.style.color = "blue";
+        I.style.textDecoration = "underline";
+      });
+      I.addEventListener("mouseout", function () {
+        I.style.backgroundColor = "rgb(235, 216, 216)";
+        I.style.textDecoration = "none";
+        I.style.color = "black";
+      });
+    </script>
+  </body>
+</html>
