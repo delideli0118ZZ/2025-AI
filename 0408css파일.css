@@ -1,0 +1,33 @@
+h1 {
+    font: size 50px;
+    color: aquamarine;
+    font-weight: 100;
+}
+h2 {
+    background-color: crimson;
+    font-weight: 900;
+}
+p {
+    line-height: 50px;
+    letter-spacing: 10px ;
+    text-decoration: underline;
+    
+    
+}
+a {
+    text-decoration: none;
+    font-style: italic;
+    text-shadow: 3px 10px 12px black; /* text-shadow: 가로 세로 번짐 색깔*/
+    color: gray;
+    font-size: 100px;
+}
+
+a {
+    font-family: "Bagel Fat One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+li {
+    list-style-type:armenian;
+}
