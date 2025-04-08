@@ -1,0 +1,26 @@
+div {
+    font-family: "Bagel Fat One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 5px 5px 10px pink;
+  }
+  
+p {
+    text-decoration: underline;
+    letter-spacing: 9px;
+}
+h2 {
+    font-size: 20px;
+}
+ul {
+    font-size: 20px;
+    font-style: italic;
+}
+#I {
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+ul {
+    line-height: 40px;
+}
