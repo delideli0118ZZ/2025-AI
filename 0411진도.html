@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>이이잉</h1>
+    <img id="꿀벌"   src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
+
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <button>버튼3</button>
+
+
+    <script>
+        let 사진 = document.querySelector("#꿀벌")
+        console.log(사진)
+        //사진.setAttribute("바꿀속성","무엇으로 바꿀지") // 태그의 속성을 바꾸는 기능
+        사진.setAttribute("src","https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420")
+        console.log(사진)
+
+        // 이벤트 거는 법
+        // 1.내가 원하는 놈을 선택한다.
+        // 2.조진다(이벤트를 걸어준다)
+        사진.addEventListener("click", function(){
+            console.log("뿌엥")
+            alert("ㅁㅇㅁ")
+        } )
+
+
+        //선택한다
+        //조진다
+    </script>
 </body>
 </html>

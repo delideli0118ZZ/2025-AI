@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 200px;
+            font-size: 40px;
+            margin: 20px;
+            border-radius: 15px;
+            background-color: rgb(200, 200, 242);
+            color: rgb(108, 91, 91);
+        }
+    </style>
+</head>
+<body>
+    <h1>버튼 클릭에 따른 이미지 슬라이드</h1>
+    <button class="I">1</button>
+    <button class="II">2</button>
+    <button class="III">3</button>
+    <br>
+    <img style="width: 400px;"   id="j" src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
+    
+    <script>
+        let j = document.querySelector("#j")
+        let I = document.querySelector(".I")
+        let II = document.querySelector(".II")
+        let III = document.querySelector(".III")
+
+        I.addEventListener("click", function(){
+            j.setAttribute("src","https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp")
+        })
+
+        II.addEventListener("click", function(){
+            j.setAttribute("src","https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420")
+        })
+
+        III.addEventListener("click", function(){
+            j.setAttribute("src","https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png")
+        })
+    </script>
+</body>
+</html>
