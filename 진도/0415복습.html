@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0415table복습</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        td {
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+        <col>
+        <col style="color: aqua ;">
+        <col style="background-color: red;">
+        <col>
+        </colgroup>
+    <thead>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </thead>
+        
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td rowspan="2">b</td>
+                <td>c</td>
+                <td>d</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">!</td>
+                <td>@</td>
+                <td>#</td>
+                <td>$</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
