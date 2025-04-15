@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        background-color: rgb(201, 239, 239);
+        width: 500px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <h1 style="font-size: 60px; color: rgb(108, 108, 242)">
+        회원가입 페이지
+      </h1>
+
+      <div class="div">
+        <h1 style="color: blue">로그인 정보</h1>
+        <h5 style="color: rgb(144, 150, 155)">
+          로그인에 사용할 ID와 비밀번호를 입력해 주세요
+        </h5>
+        <hr />
+        <label for=""
+          ><span style="font-weight: 600">아이디<br /></span
+          ><input type="text" placeholder="최대 10자"
+        /></label>
+        <br />
+        <br />
+        <label for=""
+          ><span style="font-weight: 600">비밀번호<br /></span
+          ><input type="text" placeholder="영어, 숫자 섞어서"
+        /></label>
+        <br />
+        <br />
+        <label for=""
+          ><span style="font-weight: 600">비밀번호 확인<br /></span
+          ><input type="text" placeholder="영어, 숫자 섞어서"
+        /></label>
+      </div>
+      <br />
+      <div class="div">
+        <h1 style="color: blue">개인정보</h1>
+        <h5 style="color: rgb(144, 150, 155)">
+          여러분의 개인정보를 입력해주세요
+        </h5>
+        <hr />
+        <label for=""
+          ><span style="font-weight: 600">주소<br /><br /></span
+          ><input type="text" placeholder="ㅇㅇ구 ㅇㅇ동"
+        /></label>
+        <br />
+        <h4>연령대</h4>
+        <label for=""
+          ><input type="radio" name="ages" value="10대대" />10~19</label
+        >
+        <label for=""
+          ><input type="radio" name="ages" value="20대대" />20~29</label
+        >
+        <label for=""
+          ><input type="radio" name="ages" value="30대" />30~39</label
+        >
+        <label for=""
+          ><input type="radio" name="ages" value="40대대" />40~49</label
+        >
+        <label for=""
+          ><input type="radio" name="ages" value="50이상" />50이상</label
+        >
+        <h4>성별</h4>
+        <label for=""><input type="radio" name="names" value="man" />남</label>
+        <label for=""
+          ><input type="radio" name="names" value="woman" />여</label
+        >
+        <h4>취미</h4>
+        <label for=""
+          ><input type="checkbox" name="hobby" value="game" />게임</label
+        >
+        <label for=""
+          ><input type="checkbox" name="hobby" value="youtube" />유튜브</label
+        >
+        <label for=""
+          ><input type="checkbox" name="hobby" value="music" />음악</label
+        >
+        <br />
+        <label for=""
+          ><input type="checkbox" name="hobby" value="exercise" />운동</label
+        >
+        <label for=""
+          ><input type="checkbox" name="hobby" value="read" />독서</label
+        >
+        <label for=""
+          ><input type="checkbox" name="hobby" value="travel" />여행</label
+        >
+        <label for=""
+          ><input type="checkbox" name="hobby" value="create" />창작</label
+        >
+      </div>
+      <button
+        type="submit"
+        style="
+          margin: 20px;
+          background-color: rgb(110, 110, 218);
+          width: 250px;
+          height: 50px;
+          color: white;
+        "
+      >
+        회원 가입
+      </button>
+      <button
+        type="reset"
+        style="
+          background-color: rgb(110, 110, 218);
+          width: 250px;
+          height: 50px;
+          color: white;
+        "
+      >
+        다시입력
+      </button>
+    </form>
+  </body>
+</html>
