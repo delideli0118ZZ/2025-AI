@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .color {
+        color: blue;
+      }
+      .background {
+        background-color: rgb(242, 145, 145);
+      }
+      .border {
+        border: 3px dotted black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="main">나를 꾸며주세요 ^^</h1>
+    <button class="color">색깔 넣기</button>
+    <button class="background">배경 넣기</button>
+    <button class="border">테두리 넣기</button>
+
+    <script>
+      let main = document.querySelector("#main");
+      let button1 = document.querySelector(".color");
+      let button2 = document.querySelector(".background");
+      let button3 = document.querySelector(".border");
+
+      button1.addEventListener("click", function () {
+        main.classList.add("color");
+      });
+      button2.addEventListener("click", function () {
+        main.classList.add("background");
+      });
+      button3.addEventListener("click", function () {
+        main.classList.add("border");
+      });
+    </script>
+  </body>
+</html>
