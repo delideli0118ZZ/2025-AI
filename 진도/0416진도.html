@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0416 자바스크립트 속성 조작</title>
+</head>
+<body>
+    <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
+    <br>
+    <input type="text" placeholder="입력하세요">
+
+    <button>저장</button>
+    <script>
+        let 꿀벌 = document.querySelector("img")
+        /*
+        꿀벌.addEventListener("mousedown",function(){
+            꿀벌.setAttribute("src","https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420")
+            
+        })
+        꿀벌.addEventListener("mouseup",function(){
+            꿀벌.setAttribute("src","https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp")
+            
+        })*/
+        꿀벌.setAttribute("src","https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420")
+        꿀벌.setAttribute("width","300px")
+        let 가져온것 = 꿀벌.getAttribute("src")
+        console.log(가져온것)
+        let 입력창 = document.querySelector("input")
+
+        let 버튼 = document.querySelector("button")
+
+        버튼.addEventListener("click",function(){
+            console.log(입력창.value)
+        })
+        
+    </script>
+</body>
+</html>
