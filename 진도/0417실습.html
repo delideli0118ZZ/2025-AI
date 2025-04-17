@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend style="font-size: 50px; font-weight: 600">
+          회원가입 페이지
+        </legend>
+        <h1>로그인 정보</h1>
+
+        <label>ID 입력 <input type="text" placeholder="최대 10자" /></label>
+        <br />
+        <label
+          >ID 입력(필수)
+          <input type="text" placeholder="영어, 숫자 섞어서" required
+        /></label>
+        <br />
+        <label
+          >ID 입력확인(필수)
+          <input type="text" placeholder="영어, 숫자 섞어서" required
+        /></label>
+        <hr />
+        <h1>개인정보</h1>
+        <label>주소<br /><input type="text" /></label>
+        <br />
+        <label></label>
+        <label><br /><input type="radio" name="age" value="10대" />10대</label>
+        <label><input type="radio" name="age" value="20대" />20대</label>
+        <label><input type="radio" name="age" value="30대" />30대</label>
+        <label><input type="radio" name="age" value="40대" />40대</label>
+        <label><input type="radio" name="age" value="50대이상" />50이상</label>
+        <br />
+        <br />
+        <label>성별</label>
+        <br />
+        <br />
+        <label><input type="radio" name="gender" value="man" />남</label>
+        <label><input type="radio" name="gender" value="woman" />여</label>
+        <br />
+        <br />
+        <label>취미</label>
+        <br />
+        <br />
+        <label for=""></label>
+        <label><input type="checkbox" name="hobby" value="game" />게임</label>
+        <label
+          ><input type="checkbox" name="hobby" value="youtube" />유튜브</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="ing-yeo" />잉여짓</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="exercise" />운동</label
+        >
+        <label
+          ><input type="checkbox" name="hobby" value="reading" />독서</label
+        >
+        <label><input type="checkbox" name="hobby" value="travel" />여행</label>
+        <label><input type="checkbox" name="hobby" value="create" />창작</label>
+        <br /><br />
+        <label
+          >이메일<br /><input type="email" placeholder="abcd@naver.com"
+        /></label>
+        <br /><br />
+        <label
+          >연락처<br /><input type="tel" placeholder="000-0000-0000"
+        /></label>
+        <br /><br />
+        <label>생년월일<br /><input type="date" name="" id="" /></label>
+        <br /><br />
+        <label
+          >키(최소130 최대195 기본150 단위5)
+          <input type="range" min="130" max="185" step="5"
+        /></label>
+        <br /><br />
+        <label>사진<input type="file" /></label>
+        <hr />
+        <button>회원 가입</button>
+        <button type="reset">다시 입력</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
