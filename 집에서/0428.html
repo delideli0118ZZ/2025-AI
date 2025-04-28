@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        li {
+            line-height: 40px;
+        }
+        legend {
+            font-size: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        legend{
+            text-align: center;
+        }
+        fieldset{
+            width: 70%;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>회원가입 페이지</h1>
+    <p style="text-align: center;">
+      본 사이트에 회원가입을 하기 위한 페이지 입니다. 정확한 내용을 기재하시기
+      바랍니다.
+    </p>
+    <hr />
+    <form action="">
+      <fieldset>
+        <legend>계정 정보</legend>
+        <ul>
+          <li>
+            아이디<input type="text" placeholder="4~10자 사이 공백없이" />
+          </li>
+          <li>
+            비밀번호 <input
+              type="password"
+              placeholder="문자, 숫자, 특수기호 포함"
+            />
+          </li>
+          <li>비밀번호 확인 <input type="password" /></li>
+          <li>
+              가입 경로
+              <input list="loot" placeholder="선택하거나 직접 입력">
+            <datalist id="loot">
+              <option value="blog">blog</option>
+              <option value="cafe">cafe</option>
+              <option value="search">search</option>
+              <option value="etc">etc</option>
+            </datalist>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>이름<input type="text" placeholder="4~10자 사이 공백없이"></li>
+            <li>닉네임<input type="text"></li>
+            <li>이메일 <input type="email" placeholder="abcd@gmail.com"></li>
+            <li>전화번호<input type="tel" placeholder="000-0000-0000"></li>
+            <li>생년월일<input type="date"></li>
+            <li>거주지역 <select name="" id="">
+                <option value="선택">선택</option>
+                <option value="중구">중구</option>
+                <option value="종로구">종로구</option>
+                <option value="동대문구">동대문구</option>
+                <option value="성북구">성북구</option>
+                <option value="강북구">강북구</option>
+                <option value="도봉구">도봉구</option>
+                <option value="중랑구">중랑구</option>
+            </select></li>
+            <li>키(150~200)<input type="range" min="150" max="200"></li>
+            <li>프로필 사진<input type="file"></li>
+            <li>가입하는 이유 <br><textarea cols="70" rows="6" placeholder="가입하게 된 이유를 써주세요"></textarea></li>
+        </ul>
+      </fieldset>
+      
+        <fieldset>
+            <legend>개인정보 수집 및 이용 동의</legend>
+            <p>본 사이트에 가입하기 위해서는 회원의 개인정보를 수집하고 있으며, 수집에 동의하지 않을 경우 이용 및 가입에 제한이 있습니다.</p>
+            <label>동의 <input type="radio" name="정보" id=""></label>
+            <label>거부 <input type="radio" name="정보" id=""></label>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <label>메일 수신 <input type="radio" name="이벤트" id=""></label>
+            <label>메일 수신 안 함 <input type="radio" name="이벤트" id=""></label>
+        </fieldset>
+    </form>
+    <br>
+    <button type="submit">가입하기</button>
+    <button type="reset">취소</button>
+  </body>
+</html>
