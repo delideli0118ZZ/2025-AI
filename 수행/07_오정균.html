@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7_오정균</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nanum+Brush+Script&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style>
+        
+         .box{
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 30px;
+            width: 600px;
+            margin: auto;
+        }
+        input {
+            font-weight: 200;
+            border: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.502);
+        }
+        h1 {
+            color: rgb(38, 235, 78);
+            border-left: 4px solid rgb(60, 229, 60);
+            
+            
+        }
+        .fontt {
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 600;
+            font-style: normal;
+            margin-left: 20px;
+          }
+          
+        p {
+            color: rgba(0, 0, 0, 0.347);
+        }
+        button {
+            border-radius: 20px;
+            background-color: rgb(86, 191, 86);
+            color: white;
+            width:200px;
+            border: 0px;
+            font-size: 30px;;
+            height: 50px;
+            margin: 20px;
+        }
+        select{
+            border: 0px;
+            width: 70px;
+        }
+        label {
+            line-height: 40px;
+            font-weight: 600;
+        }
+        .dlf {
+            border: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.345);
+            width: 60px;
+        }
+        span {
+            font-weight: 300;
+        }
+        .inputt {
+            width: 120px;
+        }
+    </style>
+</head>
+<body >
+    <form action="">
+        <br>
+        <div class="box">
+            <h1 class="fontt">&nbsp;&nbsp;&nbsp;자신의 프로필을 설정해주세요</h1>
+            <p>각각의 항목에 정보를 입력해주세요</p>
+            <hr>
+            <label>
+                성명<br>
+                <input type="text" placeholder="성명 입력" class="inputt">
+            </label>
+            <br>
+            <label for="">
+                주소<br>
+                <input type="text" placeholder="주소 입력" class="inputt">
+            </label>
+            <br>
+            <label for="">
+                연락처<br>
+                <input type="tel" placeholder="연락처 입력" class="inputt">
+            </label>
+            <br>
+            <label for="">
+                생년월일<br>
+                <select name="" id="">
+                    <option value="연도">연도</option>
+                    <option value="2005">2000</option>
+                    <option value="2005">2001</option>
+                    <option value="2005">2002</option>
+                    <option value="2005">2003</option>
+                    <option value="2005">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                </select>
+                
+                <select name="" id="">
+                    <option value="월">월</option>
+                    <option value="1월">1월</option>
+                    <option value="2월">2월</option>
+                    <option value="3월">3월</option>
+                    <option value="4월">4월</option>
+                    <option value="5월">5월</option>
+                    <option value="6월">6월</option>
+                    <option value="7월">7월</option>
+                    <option value="8월">8월</option>
+                    <option value="9월">9월</option>
+                    <option value="10월">10월</option>
+                    <option value="11월">11월</option>
+                    <option value="12월">12월</option>
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="dlf"><span>일</span>
+            </label>
+                <br>
+                <label for="">
+                    성별<br><input type="radio" name="gen" value="남">남
+                    <input type="radio" name="gen" value="남">여
+                </label>
+                <br>
+                <label for="">
+                    이메일<br>
+                    <input type="email" placeholder="이메일 입력" class="inputt">
+                </label>
+                <br><br>
+        </div>
+        <br><br><br>
+        <div class="box1">
+            
+            <div class="box">
+                <h1 class="fontt">&nbsp;&nbsp;&nbsp;자신을 소개해 주세요</h1>
+                <p>아래에 물음에 답하세요</p>
+                <hr>
+                <label for="">가장 마음에 드는 문구를 고르세요<br>
+                    <input type="radio" name="dooo" value="일"> <span>어렵게 생각하지 말고 끝까지 하면 된다. 희망을 가지고 간절하게 하면 된다.</span> <br>
+                    <input type="radio" name="dooo" value="이"> <span>신념을 가지면 어떤 어려움에도 흔들리지 않는다.</span> <br>
+                    <input type="radio" name="dooo" value="삼"> <span>"시계처럼 살아라."-이는 시계처럼 꾸준히 가라는 것이다. 시계처럼 시간도 지켜라</span>  <br>
+                    <input type="radio" name="dooo" value="사"> <span>인생도 건너뛰기가 없고 순간 나는 비약도 없다.</span> 
+                </label>
+                <br><br>
+                <label for="">
+                    위 문구를 선택한 이유를 쓰세요 <br>
+                    <textarea  placeholder="500자 이내" rows="10" cols="85"></textarea>
+                </label>
+                <br>
+                <label for="">자신의 진로 분야를 선택하세요 <br>
+                    <input type="checkbox" name="dream" value="프론트"><span>프론트엔드</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="dream" value="보안"><span>보안</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="dream" value="백엔드"><span>백엔드</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="dream" value="인공지능"><span>인공지능</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="dream" value="해커"><span>해커</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="dream" value="기타"><span>기타</span>&nbsp;&nbsp;
+                </label>
+                <br>
+                <label for="">
+                    개발자가 되기 위한 자신의 공부 우선 순위<br>
+                    <span>1.</span>  <input type="text" style="width: 140px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>2.</span> <input type="text" style="width: 140px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>3.</span> <input type="text" style="width: 140px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <button type="submit">제출</button>
+                <button type="reset">초기화</button>
+            </div>
+        </form>
+    </body>
+    </html>
