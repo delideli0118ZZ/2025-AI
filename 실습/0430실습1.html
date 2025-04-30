@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>술래잡기</title>
+    <style>
+      .box2 {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+      }
+      button {
+        width: 300px;
+        height: 50px;
+        font-size: 30px;
+      }
+      .box3 {
+        border: 1px dotted black;
+        text-align: center;
+        font-weight: 700;
+        width: 900px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>마우스로 술래잡기</h1>
+    <button class="button1">술래잡기 시작</button>
+    <button class="button2">술래잡기 정지</button>
+    <br /><br />
+    <div class="box" style="display: flex">
+      <div class="box2" id="box1">박스1 <img class="pic1" src="" /></div>
+      <div class="box2" id="box2">박스2 <img class="pic2" src="" /></div>
+      <div class="box2" id="box3">박스3 <img class="pic3" src="" /></div>
+    </div>
+    <br>
+    <div class="box3">
+        <p>시작을 누르면 이미지가 나타나고, 정지를 누르면 사라져야 한다.</p>
+        <p>시작하면 첫번째 박스에서 시작한다.</p>
+        <p>시작한 상태에서 다시 시작을 눌러도 아무 에러 없어야 함</p>
+        <p>중지한 상태에서 다시 중지를 눌러도 아무 에러 없어야 함</p>
+        <p>이미지가 어디에 있든 작동에 이상이 없어야 함</p>
+    </div>
+
+
+
+    <script>
+      let 버튼시작 = document.querySelector(".button1");
+      let 버튼정지 = document.querySelector(".button2");
+      let 상자1 = document.querySelector("#box1");
+      let 상자2 = document.querySelector("#box2");
+      let 상자3 = document.querySelector("#box3");
+      let 사진1 = document.querySelector(".pic1");
+      let 사진2 = document.querySelector(".pic2");
+      let 사진3 = document.querySelector(".pic3");
+      let start = 0;
+      버튼시작.addEventListener("click", function () {
+          if (start == 0) {
+            start = 1;
+            사진1.setAttribute(
+                "src",
+                "https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIy/MDAxNjE0ODYzMTQyOTkw.1Beapoh6ek4Ouh_LXme-qwqbttseqCq0Sji0qyW1BwYg.DyYGEZ_eYFC09tqxEyKhiJGfEv5-bi3bxflk82_I0_gg.PNG.jch950222/bee_happy.png?type=w420"
+      )}
+      });
+      버튼정지.addEventListener("click", function () {
+        사진1.setAttribute("src", "");
+        사진2.setAttribute("src", "");
+        사진3.setAttribute("src", "");
+        start = 0;
+      });
+      사진1.addEventListener("mouseover", function () {
+        사진1.setAttribute("src", "");
+        사진2.setAttribute(
+          "src",
+          "https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIy/MDAxNjE0ODYzMTQyOTkw.1Beapoh6ek4Ouh_LXme-qwqbttseqCq0Sji0qyW1BwYg.DyYGEZ_eYFC09tqxEyKhiJGfEv5-bi3bxflk82_I0_gg.PNG.jch950222/bee_happy.png?type=w420"
+        );
+      });
+      사진2.addEventListener("mouseover", function () {
+        사진2.setAttribute("src", "");
+        사진3.setAttribute(
+          "src",
+          "https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIy/MDAxNjE0ODYzMTQyOTkw.1Beapoh6ek4Ouh_LXme-qwqbttseqCq0Sji0qyW1BwYg.DyYGEZ_eYFC09tqxEyKhiJGfEv5-bi3bxflk82_I0_gg.PNG.jch950222/bee_happy.png?type=w420"
+        );
+      });
+      사진3.addEventListener("mouseover", function () {
+        사진3.setAttribute("src", "");
+        사진1.setAttribute(
+          "src",
+          "https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIy/MDAxNjE0ODYzMTQyOTkw.1Beapoh6ek4Ouh_LXme-qwqbttseqCq0Sji0qyW1BwYg.DyYGEZ_eYFC09tqxEyKhiJGfEv5-bi3bxflk82_I0_gg.PNG.jch950222/bee_happy.png?type=w420"
+        );
+      });
+    </script>
+  </body>
+</html>
