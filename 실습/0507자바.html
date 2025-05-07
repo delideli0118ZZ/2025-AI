@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바 키 이벤트</title>
+    <style>
+        
+        div {
+            border: 2px solid black;
+            width: 750px;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        img {
+            width: 530px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가고 싶은 여행지(a,s,d,f)</h1>
+    <div>
+        <img src="https://i.namu.wiki/i/1PU1p3DFea8b5Qwv58XVLLqpZwGPPENBCirYdfhu8jBZKg5qgRiCVhQ7eTYiS3W170EjtkU2-itMqermmtL9FQ.webp" alt="">
+        <h1 class="h">황룡: 금주성</h1>
+    </div>
+
+    <script>
+        let h = document.querySelector(".h")
+        let img = document.querySelector("img")
+        document.addEventListener("keypress", function(e) {
+            
+            if (e.key == "a") {
+                img.src = "https://i.namu.wiki/i/1PU1p3DFea8b5Qwv58XVLLqpZwGPPENBCirYdfhu8jBZKg5qgRiCVhQ7eTYiS3W170EjtkU2-itMqermmtL9FQ.webp"
+                h.textContent="황룡: 금주성"
+            }else if (e.key == "s") {
+                img.src = "https://i.namu.wiki/i/mcuRuwx1TSRxwOGyB2MVSStxxMWFVkdQJZSFnAGXHCaL8qEAnuISaLWelMj9Qr1nW_xtOzi8aVxEiuqabRQtrw.webp"
+                h.textContent="리나시타: 라군나 성"
+            }else if (e.key == "d") {
+                img.src = "https://i.ytimg.com/vi/WGX9UvBWOLo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCG-rDrl22scKoM4_hEPve30Apm_Q"
+                h.textContent="검은해안"
+            }else if (e.key == "f") {
+                img.src = "https://resources.vortexgaming.io/upload/comment/2024/06/23/d77cd0244c25495ba178fb32631ffe78.jpg"
+                h.textContent="승소산"
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 650px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 30px;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        width: 500px;
+        text-align: center;
+      }
+      span {
+        font-size: 35px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>키보드← →키로 슬라이드 전환</h1>
+    <div>
+      <span>←</span>
+      <img
+        src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202503/30/HankyungGametoc/20250330162329700qiyx.png"
+        alt=""
+      /><span>→</span>
+      <h2>1. 칸타렐라</h2>
+    </div>
+    <script>
+      let img = document.querySelector("img");
+      let h = document.querySelector("h2");
+      let a = 1;
+      let img1 = document.createElement("img");
+      document.addEventListener("keyup", function (e) {
+        if (e.key == "ArrowRight" && a == 1) {
+          a = 2;
+          img.src =
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgzjZ3ZAFjfNEtI_KqCZm4fhFOoOIMQC3RIA&s";
+          h.textContent = "2. 젠니";
+        } else if (e.key == "ArrowRight" && a == 2) {
+          a = 3;
+          img.src =
+            "https://cdn.gametoc.co.kr/news/photo/202406/81885_249922_4658.jpg";
+          h.textContent = "3. 음림";
+        } else if (e.key == "ArrowRight" && a == 3) {
+          a = 4;
+          img.src =
+            "https://cdn.khgames.co.kr/news/photo/202407/230275_260995_162.jpg";
+          h.textContent = "4. 장리";
+        } else if (e.key == "ArrowRight" && a == 4) {
+          a = 1;
+          img.src =
+            "https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202503/30/HankyungGametoc/20250330162329700qiyx.png";
+          h.textContent = "1. 칸타렐라";
+        } else if (e.key == "ArrowLeft" && a == 4) {
+          a = 3;
+          img.src =
+            "https://cdn.gametoc.co.kr/news/photo/202406/81885_249922_4658.jpg";
+          h.textContent = "3. 음림";
+        } else if (e.key == "ArrowLeft" && a == 3) {
+          a = 2;
+          img.src =
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgzjZ3ZAFjfNEtI_KqCZm4fhFOoOIMQC3RIA&s";
+          h.textContent = "2. 젠니";
+        } else if (e.key == "ArrowLeft" && a == 2) {
+          a = 1;
+          img.src =
+            "https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202503/30/HankyungGametoc/20250330162329700qiyx.png";
+          h.textContent = "1. 칸타렐라";
+        } else if (e.key == "ArrowLeft" && a == 1) {
+          a = 4;
+          img.src =
+            "https://cdn.khgames.co.kr/news/photo/202407/230275_260995_162.jpg";
+          h.textContent = "4. 장리";
+        }
+      });
+    </script>
+  </body>
+</html>
