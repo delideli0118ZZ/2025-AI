@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 관련 이론</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">박스</div>
+
+    <script>
+      let 박스 = document.querySelector(".box");
+      박스.addEventListener("click", function (e) {
+        console.log(e);
+      });
+
+      document.addEventListener("keydown",function(e){
+        console.log(e)
+      })
+    </script>
+  </body>
+</html>
