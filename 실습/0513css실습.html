@@ -5,26 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
         text-align: center;
       }
-      .Top {
+      a:link {
+        color: black;
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      ul li:hover {
+        background-color: rgb(188, 188, 188);
+      }
+      ul li:active {
+        background-color: rgb(155, 155, 155);
+      }
+      nav {
+        height: 50px;
+        border-bottom: 1px solid rgb(188, 188, 188);
+      }
+      nav ul {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      nav ul li {
         display: inline-block;
-        margin: 30px;
-        width: 65px;
+        list-style-type: none;
+        width: 70px;
+        height: 50px;
         line-height: 50px;
+        margin: 0 30px;
       }
-      .Top:hover {
-        background-color: rgb(213, 209, 209);
-      }
-      .Top:active {
-        background-color: gray;
+      nav ul li a {
+        display: inline-block;
       }
       .mom {
         background-color: rgb(214, 209, 209);
-        width: 800px;
-        margin: auto;
-        padding: 15px;
+        width: 900px;
+        margin: 0 auto;
+        padding: 10px;
       }
       h2 {
         color: rgb(180, 55, 55);
@@ -32,31 +57,26 @@
       .sec1 {
         background-color: white;
         width: 550px;
-        margin: auto;
+        padding: 10px;
+        margin: 10px auto;
         border-radius: 20px;
-        height: 220px;
       }
       .sec2 {
+        display: inline-block;
         background-color: white;
         width: 550px;
-        margin: auto;
+        padding: 10px;
+        margin: 10px auto;
         border-radius: 20px;
-        height: 600px;
       }
       .sec2 > div {
-        display: inline;
+        display: inline-block;
       }
       img {
-        width: 242px;
+        width: 230px;
       }
       .foot {
         color: rgba(0, 0, 0, 0.395);
-      }
-      .img1 {
-        float: left;
-      }
-      .img2 {
-        float: left;
       }
       .sec1 p:hover {
         background-color: rgb(213, 209, 209);
@@ -77,18 +97,31 @@
 
       box-sizing 설정 후 시작
     </h4>
-    <a href="https://www.naver.com/"
-      ><img
-        src="https://i.namu.wiki/i/QLvgDI_GdC1WLO8Uv2DCO38xNSL7NUuH8D_kSoy1npWyxAfTL99a3-a5w-lG8nu7WQHDQgc2qZQnp8XQ_SLVQQ.webp"
-        style="width: 400px"
-        alt="사진"
-    /></a>
+    <header>
+      <a href="https://www.naver.com/"
+        ><img
+          src="https://i.namu.wiki/i/QLvgDI_GdC1WLO8Uv2DCO38xNSL7NUuH8D_kSoy1npWyxAfTL99a3-a5w-lG8nu7WQHDQgc2qZQnp8XQ_SLVQQ.webp"
+          style="width: 400px"
+          alt="사진"
+      /></a>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="">Main</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Top</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+    </nav>
     <br />
-    <div class="Top">Main</div>
-    <div class="Top">About</div>
-    <div class="Top">Top</div>
-    <div class="Top">Contact</div>
-    <hr style="margin-top: -30px" />
     <div class="mom">
       <div class="sec1">
         <h2>가상 클래스를 활용한 UI 디자인</h2>
@@ -105,33 +138,28 @@
             src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
             alt=""
           />
-          <br />
-          <span>기쁨</span>
+          <p>기쁨</p>
         </div>
         <div class="img1">
           <img
             src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3155.png"
             alt=""
           />
-          <br />
-          <span>슬픔</span>
+          <p>슬픔</p>
         </div>
-        <br />
         <div class="img2">
           <img
             src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png"
             alt=""
           />
-          <br />
-          <span>분노</span>
+          <p>분노</p>
         </div>
         <div class="img2">
           <img
             src="https://item.kakaocdn.net/do/3ccde2d0d233813e977e63baf64e81a94022de826f725e10df604bf1b9725cfd"
             alt=""
           />
-          <br />
-          <span>냠냠</span>
+          <p>냠냠</p>
         </div>
       </div>
     </div>
