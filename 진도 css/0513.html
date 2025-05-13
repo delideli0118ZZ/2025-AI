@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/">
+    <style>
+        /* mom의 자식인 div를 선택하는법 */
+        .mom > div{
+            background-color: skyblue;
+            border: 3px solid black;
+        }
+        /* mom의 후손인 div. mom 밑의 모든 div */
+        .mom div {
+            color: red;
+        }
+        .box:hover{ /* 가상 클래스":" 특정 조건에서 스타일을 바꾸는 것 */
+            background-color: aliceblue ; color: blue;
+            width: 300px;
+        }
+        .child:hover{
+            background-color: #EEE;
+        }
+        .child:active{
+            background-color: #CCC;
+        }
+        .box:nth-of-type(2n) {
+            background-color: saddlebrown;
+        }
+        .box:nth-of-type(2n+1) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="mom">
+        <div class="box">자식1</div>
+        <div class="box">자식2</div>
+        <div class="box">자식3</div>
+        <div class="box">자식4</div>
+        <div class="box">자식5</div>
+        <div class="box">자식6</div>
+        <section>
+            <div class="child">자식</div>
+            <div class="child">자식</div>
+            <div class="child">자식</div>
+        </section>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .Top {
+        display: inline-block;
+        margin: 30px;
+        width: 65px;
+        line-height: 50px;
+      }
+      .Top:hover {
+        background-color: rgb(213, 209, 209);
+      }
+      .Top:active {
+        background-color: gray;
+      }
+      .mom {
+        background-color: rgb(214, 209, 209);
+        width: 800px;
+        margin: auto;
+        padding: 15px;
+      }
+      h2 {
+        color: rgb(180, 55, 55);
+      }
+      .sec1 {
+        background-color: white;
+        width: 550px;
+        margin: auto;
+        border-radius: 20px;
+        height: 220px;
+      }
+      .sec2 {
+        background-color: white;
+        width: 550px;
+        margin: auto;
+        border-radius: 20px;
+        height: 600px;
+      }
+      .sec2 > div {
+        display: inline;
+      }
+      img {
+        width: 242px;
+      }
+      .foot {
+        color: rgba(0, 0, 0, 0.395);
+      }
+      .img1 {
+        float: left;
+      }
+      .img2 {
+        float: left;
+      }
+      .sec1 p:hover {
+        background-color: rgb(213, 209, 209);
+      }
+      .sec1 p:active {
+        background-color: gray;
+      }
+      h4 {
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>
+      영역 전체가 클릭 가능해야 함<br />
+
+      전체 마진과 패딩을 0으로 시작<br />
+
+      box-sizing 설정 후 시작
+    </h4>
+    <a href="https://www.naver.com/"
+      ><img
+        src="https://i.namu.wiki/i/QLvgDI_GdC1WLO8Uv2DCO38xNSL7NUuH8D_kSoy1npWyxAfTL99a3-a5w-lG8nu7WQHDQgc2qZQnp8XQ_SLVQQ.webp"
+        style="width: 400px"
+        alt="사진"
+    /></a>
+    <br />
+    <div class="Top">Main</div>
+    <div class="Top">About</div>
+    <div class="Top">Top</div>
+    <div class="Top">Contact</div>
+    <hr style="margin-top: -30px" />
+    <div class="mom">
+      <div class="sec1">
+        <h2>가상 클래스를 활용한 UI 디자인</h2>
+        <p>목표가 없는 사람은 시간을 허투루 쓴다.</p>
+        <p>물질은 내가 원하는 것을 이루기 위한 수단이지, 목표가 될 수 없다.</p>
+        <p>꿈과 직업은 서로 다르다. 달라야 한다.</p>
+        <p>어디에 가치를 두느냐에 따라 인생이 달라진다.</p>
+      </div>
+
+      <div class="sec2">
+        <h2>사진 채우기</h2>
+        <div class="img1">
+          <img
+            src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+            alt=""
+          />
+          <br />
+          <span>기쁨</span>
+        </div>
+        <div class="img1">
+          <img
+            src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3155.png"
+            alt=""
+          />
+          <br />
+          <span>슬픔</span>
+        </div>
+        <br />
+        <div class="img2">
+          <img
+            src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png"
+            alt=""
+          />
+          <br />
+          <span>분노</span>
+        </div>
+        <div class="img2">
+          <img
+            src="https://item.kakaocdn.net/do/3ccde2d0d233813e977e63baf64e81a94022de826f725e10df604bf1b9725cfd"
+            alt=""
+          />
+          <br />
+          <span>냠냠</span>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <p class="foot">
+      본 페이지는 개인 포트폴리오 용도로 작성되었습니다. <br />
+
+      rbride7@gmail.com || 010-0000-0000 <br />
+
+      Copyright (c) 2023 Redbee All rights reserved.
+    </p>
+  </body>
+</html>
