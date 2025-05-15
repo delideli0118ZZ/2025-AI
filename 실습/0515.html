@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        border-radius: 30px;
+        background-color: white;
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        height: 320px;
+      }
+      header > ul > li {
+        list-style: none;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 10px;
+        display: inline-block;
+      }
+      header > ul > li:hover {
+        color: gray;
+        font-weight: 900;
+      }
+      header > ul > li:active {
+        background-color: gray;
+        color: white;
+      }
+      img {
+        width: 200px;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      section {
+        padding: 20px;
+        background-color: white;
+        width: 1200px;
+        height: 400px;
+        border-radius: 30px;
+        margin: auto;
+      }
+      .box1 {
+        background-color: rgb(249, 239, 239);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 20px;
+        line-height: 37px;
+        width: 570px;
+        height: 340px;
+      }
+      .box1 > ul > li {
+        margin-left: 20px;
+      }
+      .list1::before {
+        content: "hot";
+        background-color: red;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+      .list2::before {
+        content: "hot";
+        background-color: red;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+      .list3::before {
+        content: "new";
+        background-color: blue;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+
+      .list4::before {
+        content: "hot";
+        background-color: red;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        color: white;
+      }
+      .list5::before {
+        content: "♥";
+        color: white;
+        background-color: pink;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+      }
+      .list6::before {
+        content: "♥";
+        color: white;
+        background-color: pink;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+      }
+      .toru {
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      tr:nth-of-type(2n) {
+        background-color: rgb(213, 213, 247);
+      }
+      tr:nth-of-type(2n-1) {
+        background-color: rgb(254, 254, 207);
+      }
+      .box3 {
+        text-align: left;
+        margin: 0 auto;
+      }
+      .p3 {
+        text-align: center;
+      }
+      .big_box {
+        display: flex;
+      }
+      img {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(249, 239, 239)">
+    <header>
+      <img
+        src="https://item.kakaocdn.net/do/834e7bd2308992756c2f996bdc7382298f324a0b9c48f77dbce3a43bd11ce785"
+        alt=""
+      />
+      <br />
+      <p>width 1200px/아래 메뉴에서 가상클래스 적용하기</p>
+      <br />
+      <ul>
+        <li>메뉴</li>
+        <li>공지사항</li>
+        <li>갤러리</li>
+        <li>마이페이지</li>
+        <li>커뮤니티</li>
+      </ul>
+    </header>
+    <br />
+    <section class="sec1">
+      <p class="toru">section영역 width 영역: 1200px height:400px</p>
+      <div class="big_box">
+        <div class="box1">
+          <p>width:570px height:340px</p>
+          <h1>새겨 둘 메세지</h1>
+          <ul>
+            <li class="list1">지금 아니면 못 할 것을 하며 살아라.</li>
+            <li class="list2">사람은 저마자 갈 길이 다르다. 자기 길을 가라.</li>
+            <li class="list3">
+              남이 돕는다고 따라가면 자기 길 못 가고 얻을 것 못 얻는다.
+            </li>
+            <li class="list4">자랑할 것이 있게 행동해라.</li>
+            <li class="list5">모든 삶의 이티는 동일라다.1등 하려면 힘들다.</li>
+            <li class="list6">
+              제대로 못 했어도 포기하지 말고 교정하면 되는 것도 있다.
+            </li>
+          </ul>
+        </div>
+        <div class="box1">
+          <p>width:570px height:340px</p>
+          <table border="1">
+            <tr>
+              <td>table 홀수 줄에 색깔 넣기</td>
+              <td>table 홀수 줄에 색깔 넣기</td>
+            </tr>
+            <tr>
+              <td>CSS에 tr:nth-of-type 스타일 사용</td>
+              <td>CSS에 tr:nth-of-type 스타일 사용</td>
+            </tr>
+            <tr>
+              <td>홀수는 odd</td>
+              <td>홀수는 odd</td>
+            </tr>
+            <tr>
+              <td>짝수는 even</td>
+              <td>짝수는 even</td>
+            </tr>
+            <tr>
+              <td>홀수 줄</td>
+              <td>홀수 줄</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section>
+      <p class="p3">section영역 width:1200px height:400px</p>
+      <p class="p3">div로 박스 3개 구현, width:350px</p>
+      <div class="big_box">
+        <div class="box3">
+          <img
+            src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+            alt=""
+          />
+          <h4>기뻐</h4>
+        </div>
+        <div class="box3">
+          <img
+            src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3155.png"
+            alt=""
+          />
+          <h4>슬퍼</h4>
+        </div>
+        <div class="box3">
+          <img
+            src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3154.png"
+            alt=""
+          />
+          <h4>화나</h4>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        .title1::before {
+            content: "hot";
+            background-color: tomato;
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .title2::after {
+            content: "best";
+        }
+        .title3::first-line {  /* 첫 줄 */
+            background-color: red;
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .title4::first-letter {/* 첫 글자 */
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .title5::selection { /* 드래그 색 */
+            background-color: rgb(176, 176, 230);
+            padding: 5px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, harum?</p>
+    <p class="title2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odio!</p>
+    <p class="title3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, tempore?</p>
+    <p class="title4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ipsum?</p>
+    <p class="title5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, doloremque.</p>
+</body>
+</html>
