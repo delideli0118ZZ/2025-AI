@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투두리스트</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: cyan;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+      }
+      input {
+        height: 50px;
+        border-radius: 10px;
+        width: 250px;
+        border: none;
+      }
+      .task {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #aaa;
+        height: 70px;
+        align-items: center;
+      }
+      .left {
+        flex: 1;
+        text-align: center;
+      }
+      .center {
+        flex: 8;
+      }
+      .right {
+        flex: 1;
+        text-align: center;
+      }
+      .favorite {
+        color: palevioletred;
+        cursor: pointer;
+      }
+      .done {
+        color: turquoise;
+        cursor: pointer;
+      }
+      .clear {
+        color: palevioletred;
+        cursor: pointer;
+      }
+      .ok {
+        color: #ccc;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Todo</h1>
+      <input type="text" name="" id="" />
+    </header>
+    <section></section>
+    <script>
+      const 인풋 = document.querySelector("input"); //const: 값 변경 불가
+      const 섹션 = document.querySelector("section");
+      인풋.addEventListener("keydown", function (e) {
+        // enter 누르는것 감지
+        if (e.key == "Enter") {
+          console.log("엔터");
+          console.log(인풋.value);
+
+          // section에다가 할 일 한줄 추가
+   
+          let task = document.createElement("div");
+          task.classList.add("task");
+          console.log(task);
+
+          // 왼쪽
+          let 왼쪽 = document.createElement("div");
+          왼쪽.classList.add("left");
+          let 하트 = document.createElement("i");
+          하트.classList.add("material-icons");
+          하트.classList.add("favorite");
+          하트.textContent = "favorite_border";
+          하트.addEventListener("click", function () {
+            if (하트.textContent == "favorite_border") {
+              하트.textContent = "favorite";
+            } else if (하트.textContent == "favorite") {
+              하트.textContent = "favorite_border";
+            }
+          });
+          왼쪽.appendChild(하트);
+          task.appendChild(왼쪽);
+
+          // 중간
+          let 중간 = document.createElement("div");
+          중간.classList.add("center");
+          task.appendChild(중간);
+          중간.textContent = 인풋.value;
+          인풋.value = ""; // 입력칸 초기화
+
+          //오른쪽
+          let 오른쪽 = document.createElement("div");
+          오른쪽.classList.add("right");
+          task.appendChild(오른쪽);
+
+          let 체크 = document.createElement("i");
+          체크.classList.add("material-icons");
+          체크.classList.add("done");
+          체크.textContent = "done";
+          체크.addEventListener("click", function () {
+            중간.classList.add("ok");
+            체크.style.display = "none"; // 체크버튼 숨기기
+          });
+          오른쪽.appendChild(체크);
+
+          let 삭제 = document.createElement("i");
+          삭제.classList.add("material-icons");
+          삭제.classList.add("clear");
+          삭제.textContent = "clear";
+          삭제.addEventListener("click", function () {
+            섹션.removeChild(task);
+          });
+          오른쪽.append(삭제);
+          task.appendChild(오른쪽);
+
+          섹션.appendChild(task);
+        }
+      });
+    </script>
+  </body>
+</html>
