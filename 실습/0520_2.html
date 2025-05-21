@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.075);
+      }
+      .head1 {
+        display: flex;
+        color: blue;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .li1 {
+        text-align: center;
+        list-style: none;
+        margin: 10px;
+        border-radius: 10px;
+        width: 120px;
+        height: 70px;
+        padding: 20px;
+      }
+      .li2 {
+        text-align: left;
+        list-style: none;
+        font-weight: 500;
+        width: 130px;
+        height: 50px;
+        padding: 14px 10px;
+        border-radius: 10px;
+        margin-top: -0px;
+      }
+      li:hover {
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.607);
+        color: black;
+      }
+      img {
+        width: 90px;
+      }
+      .rog {
+        margin: 10px;
+        border-radius: 10px;
+        width: 200px;
+        height: 70px;
+        padding: 20px 0px;
+        text-align: center;
+      }
+      .rog:hover {
+        color: black;
+        background-color: rgba(128, 128, 128, 0.338);
+      }
+      section {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sec2 {
+        background-color: white;
+        box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.105);
+        padding: 25px;
+        margin: 25px;
+        height: 130px;
+      }
+      .rog {
+        width: 100px;
+      }
+      .rog:hover {
+        background-color: gray;
+      }
+      .menu {
+        width: 15%;
+        margin: 30px;
+      }
+
+      .news {
+        width: 50%;
+      }
+      .guide {
+        width: 20%;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body style="background-color: rgba(128, 128, 128, 0.203)">
+    <header>
+      <div class="head1">
+        <img
+          src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+          alt=""
+        />
+      </div>
+      <div class="head1">
+        <ul class="head1">
+          <li class="li1">게시판</li>
+          <li class="li1">친구들</li>
+          <li class="li1">피드</li>
+          <li class="li1">즐겨찾기</li>
+        </ul>
+      </div>
+      <div class="head1">
+        <div class="rog">로그인</div>
+        <div class="rog">회원가입</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="menu">
+        <li class="li2">친구 찾기</li>
+        <li class="li2">그룹</li>
+        <li class="li2">저장됨</li>
+        <li class="li2">페이지</li>
+        <li class="li2">이벤트</li>
+        <li class="li2">최신</li>
+        <li class="li2">즐겨찾기</li>
+      </div>
+      <div class="news">
+        <div class="sec2">
+          <h1>오늘의 뉴스</h1>
+          <span>도파민 중독에 대해</span>
+        </div>
+        <div class="sec2">
+          <h1>오늘의 뉴스</h1>
+          <span>어떤 일을 하려면 어려움이 있다. 그래도 해야 된다.</span>
+        </div>
+      </div>
+      <div class="guide">
+        <h1>가이드</h1>
+        <p>
+          상단 헤더와 중앙 콘텐츠에 그림자 <br />
+
+          상단과 좌측 메뉴는 마우스가 변하며, <br />
+          클릭 가능
+        </p>
+        <hr style="margin: 10px" />
+      </div>
+    </section>
+  </body>
+</html>
