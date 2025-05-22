@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 이미지 넣기</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 600px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+        .box1 {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_t2EQ0dqNJZRvm0j2XiKttFTaL53fiTtulQ&s');
+            background-size: contain;
+            /*background-attachment: fixed;*/
+            background-repeat: no-repeat;
+            background-position: 10px 10px;
+        }
+        .box2 {
+            background-image: url('https://image.fmkorea.com/files/attach/new5/20250424/8292973393_494354581_afb06391b4781bcdf84c3dbfcb3a91fc.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+</body>
+</html>
