@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>애국가 타자연습</h1>
+    <p>타이핑을 하여 내용이 일치하면 ok 표시</p>
+    <p>ok 표시를 위한 태그는 span 사용 권장</p>
+    <hr />
+    <h1>input 이벤트와 조건문을 활용</h1>
+    <h2>값을 입력하면 맞는지 점검함</h2>
+    동해물과 <input type="text" class="i1" /><span class="s1"></span>
+    <br />
+    백두산이 <input type="text" class="i2" /><span class="s2"></span>
+    <h1>키보드 이벤트 활용</h1>
+    <h2>Enter를 누르면 확인함</h2>
+    마르고 <input type="text" class="i3" /><span class="s3"></span>
+    <br />
+    닳도록 <input type="text" class="i4" /><span class="s4"></span>
+    <script>
+      let 인풋1 = document.querySelector(".i1");
+      let 인풋2 = document.querySelector(".i2");
+      let 인풋3 = document.querySelector(".i3");
+      let 인풋4 = document.querySelector(".i4");
+      let s1 = document.querySelector(".s1");
+      let s2 = document.querySelector(".s2");
+      let s3 = document.querySelector(".s3");
+      let s4 = document.querySelector(".s4");
+      인풋1.addEventListener("input", function () {
+        if (인풋1.value == "동해물과") {
+          s1.textContent = "ok";
+        } else {
+          s1.textContent = "x";
+        }
+      });
+      인풋2.addEventListener("input", function () {
+        if (인풋2.value == "백두산이") {
+          s2.textContent = "ok";
+        } else {
+          s2.textContent = "x";
+        }
+      });
+      인풋3.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+          if (인풋3.value == "마르고") {
+            s3.textContent = "ok";
+          } else {
+            s3.textContent = "x";
+          }
+        }
+      });
+      인풋4.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+          if (인풋4.value == "닳도록") {
+            s4.textContent = "ok";
+          } else {
+            s4.textContent = "x";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
