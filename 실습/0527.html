@@ -1,209 +1,222 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        li {
-            list-style: none;
-            width: 200px;
-            height: 40px;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px;
-        }
-        li:hover{
-            background-color: rgba(128, 128, 128, 0.244);
-            cursor: pointer;
-        }
-        .big_box {
-            display: flex;
-            height: 1000px
-        }
-        input {
-            border-radius: 10px;
-            width: 300px;
-            height: 30px;
-            border: 1px solid rgba(0, 0, 0, 0.304);
-        }
-        .top_search {
-            color: rgba(128, 128, 128, 0.694);
-        }
-        .left {
-            border-right: 1px solid rgba(128, 128, 128, 0.568);
-            position: fixed;
-            z-index: 100;
-            height: 1500px;
-            flex: 3;
-            background-color: white;
-        }
-        .top {
-            border-bottom: 1px solid rgba(128, 128, 128, 0.571);
-            height: 50px;
-            align-items: center;
-            width: 100%;
-            position: fixed;
-            background-color: white;
-            z-index: 10;
-            left: 220px;
-        }
-        h2 {
-            cursor: pointer;
-        }
-        .search1 {
-            position: relative;
-            left: 450px;
-            z-index: 10;
-        }
-        .main {
-            position: relative;
-            top: 100px;
-            left: 300px;
-            flex: 7;
-            background-color: white;
-        }
-        .main>div{
-            width: 500px;
-        }
-        img {
-            cursor: pointer; 
-            
-        }
-        .ejqhrl {
-            position: fixed;
-            bottom: 10px;
-        }
-        .cncjs {
-            position: absolute;
-            left: 500px;
-        }
-        .cncjs_1 {
-            position: absolute;
-            left: 500px;
-            top: 150px;
-        }
-        .cncjs_2 {
-            position: absolute;
-            left: 500px;
-            top: 250px;
-        }
-        .cncjs1 {
-            display: flex;
-        }
-        h3 {
-            display: inline-block;
-        }
-        h4 {
-            display: inline-block;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      li {
+        list-style: none;
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+      }
+      li:hover {
+        background-color: rgba(128, 128, 128, 0.244);
+        cursor: pointer;
+      }
+      .big_box {
+        display: flex;
+        height: 1000px;
+      }
+      input {
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.304);
+      }
+      .top_search {
+        color: rgba(128, 128, 128, 0.694);
+      }
+      .left {
+        border-right: 1px solid rgba(128, 128, 128, 0.568);
+        position: fixed;
+        z-index: 100;
+        height: 1500px;
+        background-color: white;
+      }
+      .top {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.571);
+        height: 50px;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        left: 220px;
+      }
+      h2 {
+        cursor: pointer;
+      }
+      .search1 {
+        position: absolute;
+        right: 800px;
+        z-index: 10;
+      }
+      .main {
+        position: relative;
+        top: 100px;
+        left: 300px;
+        background-color: white;
+      }
+      .main > div {
+        width: 500px;
+      }
+      img {
+        cursor: pointer;
+      }
+      .ejqhrl {
+        position: fixed;
+        bottom: 10px;
+      }
+
+      h3 {
+        display: inline-block;
+      }
+      h4 {
+        display: inline-block;
+      }
+      .big_box2 {
+        position: absolute;
+        left: 800px;
+        top: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="big_box">
-        <div class="left">
-            <h2>instagram</h2>
-            <br><br>
-            <li><i class="material-icons">home</i> 홈</li>
-            <li><i class="material-icons">search</i> 검색</li>
-            <li><i class="material-icons">ondemand_video</i> 탑색 탭</li>
-            <li><i class="material-icons">ondemand_video</i> 릴스</li>
-            <li><i class="material-icons">message</i> 메시지</li>
-            <li><i class="material-icons">favorite_border</i> 알림</li>
-            <li><i class="material-icons">add_circle_outline</i> 만들기</li>
-            
-            <div class="ejqhrl">
-                <li><i class="material-icons">more_vert</i> 더보기</li>
-            </div>
+      <div class="left">
+        <h2>instagram</h2>
+        <br /><br />
+        <li><i class="material-icons">home</i> 홈</li>
+        <li><i class="material-icons">search</i> 검색</li>
+        <li><i class="material-icons">ondemand_video</i> 탑색 탭</li>
+        <li><i class="material-icons">ondemand_video</i> 릴스</li>
+        <li><i class="material-icons">message</i> 메시지</li>
+        <li><i class="material-icons">favorite_border</i> 알림</li>
+        <li><i class="material-icons">add_circle_outline</i> 만들기</li>
+
+        <div class="ejqhrl">
+          <li><i class="material-icons">more_vert</i> 더보기</li>
         </div>
-        <div class="top">
-            <div class="search1">
-                <i class="material-icons top_search">search</i>
-                <input type="text" placeholder=" 검색">
-            </div>
+      </div>
+      <div class="top">
+        <div class="search1">
+          <i class="material-icons top_search">search</i>
+          <input type="text" placeholder=" 검색" />
         </div>
-        <div class="main">
-            <div class="cncjs">
-                추천유저
-                <br><br>
-                <div class="cncjs1">
-                    <br><br>
-                    <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"  style="width:60px; margin:5px"alt="">
-                    <div class="min">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <h4> Lorem ipsum dolor sit amet consectetur adipisicing</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="cncjs_1">
-                <div class="cncjs1">
-                    <br><br>
-                    <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"  style="width:60px; margin:5px"alt="">
-                    <div class="min">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <h4> Lorem ipsum dolor sit amet consectetur adipisicing</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="cncjs_2">
-                <div class="cncjs1">
-                    <br><br>
-                    <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"  style="width:60px; margin:5px"alt="">
-                    <div class="min">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <h4> Lorem ipsum dolor sit amet consectetur adipisicing</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="box1">
-                <h1>유잼</h1>
-                <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
-                <br>
-                <i class="material-icons">favorite_border</i>
-                <i class="material-icons">&nbsp; comment</i>
-                <br><br>
-                <hr>
-                <br>
-            </div>
-            <div class="box1">
-                <h1>유감</h1>
-                <img src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420" alt="">
-                <br>
-                <i class="material-icons">favorite_border</i>
-                <i class="material-icons">&nbsp; comment</i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore accusamus amet suscipit quae iure. Saepe veniam animi libero earum possimus molestiae fugit beatae, totam quis minus dolorem. Atque, nesciunt.</p>
-                <br><br>
-                <hr>
-                <br>
-            </div>
-            <div class="box1">
-                <h1>응잼</h1>
-                <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
-                <br>
-                <i class="material-icons">favorite_border</i>
-                <i class="material-icons">&nbsp; comment</i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore accusamus amet suscipit quae iure. Saepe veniam animi libero earum possimus molestiae fugit beatae, totam quis minus dolorem. Atque, nesciunt.</p>
-                <br><br>
-                <hr>
-            </div>
-            <div class="box1">
-                <h1>응잼</h1>
-                <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
-                <br>
-                <i class="material-icons">favorite_border</i>
-                <i class="material-icons">&nbsp; comment</i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel inventore accusamus amet suscipit quae iure. Saepe veniam animi libero earum possimus molestiae fugit beatae, totam quis minus dolorem. Atque, nesciunt.</p>
-                <br><br>
-                <hr>
-            </div>
-            
+      </div>
+      <div class="main">
+        <div class="feed">
+          <div class="box1">
+            <h1>유잼</h1>
+            <img
+              src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+              alt=""
+            />
+            <br />
+            <i class="material-icons">favorite_border</i>
+            <i class="material-icons">&nbsp; comment</i>
+            <br /><br />
+            <hr />
+            <br />
+          </div>
+          <div class="box1">
+            <h1>유감</h1>
+            <img
+              src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420"
+              alt=""
+            />
+            <br />
+            <i class="material-icons">favorite_border</i>
+            <i class="material-icons">&nbsp; comment</i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+              inventore accusamus amet suscipit quae iure. Saepe veniam animi
+              libero earum possimus molestiae fugit beatae, totam quis minus
+              dolorem. Atque, nesciunt.
+            </p>
+            <br /><br />
+            <hr />
+            <br />
+          </div>
+          <div class="box1">
+            <h1>응잼</h1>
+            <img
+              src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+              alt=""
+            />
+            <br />
+            <i class="material-icons">favorite_border</i>
+            <i class="material-icons">&nbsp; comment</i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+              inventore accusamus amet suscipit quae iure. Saepe veniam animi
+              libero earum possimus molestiae fugit beatae, totam quis minus
+              dolorem. Atque, nesciunt.
+            </p>
+            <br /><br />
+            <hr />
+          </div>
+          <div class="box1">
+            <h1>응잼</h1>
+            <img
+              src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+              alt=""
+            />
+            <br />
+            <i class="material-icons">favorite_border</i>
+            <i class="material-icons">&nbsp; comment</i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+              inventore accusamus amet suscipit quae iure. Saepe veniam animi
+              libero earum possimus molestiae fugit beatae, totam quis minus
+              dolorem. Atque, nesciunt.
+            </p>
+            <br /><br />
+            <hr />
+          </div>
         </div>
+        <div class="big_box2">
+          <img
+            src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+            style="width: 60px"
+          />
+          <div class="min">
+            <h3>Lorem, ipsum dolor.</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing</h4>
+          </div>
+          <br /><br />
+          <img
+            src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+            style="width: 60px"
+          />
+          <div class="min">
+            <h3>Lorem, ipsum dolor.</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing</h4>
+          </div>
+          <br /><br />
+          <img
+            src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp"
+            style="width: 60px"
+          />
+          <div class="min">
+            <h3>Lorem, ipsum dolor.</h3>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing</h4>
+          </div>
+        </div>
+      </div>
     </div>
-    </body>
+  </body>
 </html>
