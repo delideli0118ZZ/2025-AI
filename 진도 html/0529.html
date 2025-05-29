@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼 트랜지션</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            transition: 1s all ease-in; /* 1초 뒤에 시작*/
+        }
+        .box1:hover {
+            transform: translate(150px, 100px); /*위치 이동*/
+        }
+        .box2:hover {
+            transform: rotate(360deg) translate(150px,100px) scale(1.5);
+            background-color: coral;
+        }
+        .box3:hover {
+            transform: scale(1.5);
+        }
+        .box4:hover {
+            transform: skew(20deg, 30deg);
+            background-color: coral;
+        }
+        .item {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .item img {
+            width: 300px;
+            height: 200px;
+        }
+        .caption {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.434);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: 1s all;
+        }
+        .caption:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+
+    <br>
+    <div class="item">
+        <img src="https://i.namu.wiki/i/NmggXzWPVqnFe9v6XOoRLnxN1fp3uva_3oY6Stbzx8pzfdgU8kiOMbTRtf0XiKrgpZErZw1bKihjwH6s0f-9hA.webp" alt="">
+        <div class="caption">
+            <h3>유독성함정</h3>
+            <p>굿</p>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all 0.4s;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+        .box1 {
+            background-image: url(https://i.namu.wiki/i/QoShOSI5_nz5oYQYlprWvJ6S9rKJSXKmFkTkMGY6mXrLqLn3O-kraBseD01PJDy8nfzQIvd7AgUliQZqpq_MSQ.webp);
+            background-size:cover ;
+            background-position: 0px -50px;
+            position: relative;
+            margin: 10px;
+        }
+        .box2 {
+            background-image: url(https://i.namu.wiki/i/kr_0JBy_4o2RCk3eGP7OwQYHpVv6-6iY9BPLm4F8sD5sOkUZw4QAzuniQnwtedXkg7IJ2AZH94ta4DiPGoKhGw.webp);
+            background-size: cover;
+            background-position: 0px -50px;
+            position: relative;
+            margin: 10px;
+        }
+        .box3 {
+            background-image: url(https://i.namu.wiki/i/Y1Nn3KgxkHvkH8LTiy6vHZ6J6f-eQiLxBY2XLDmyzS87qe5oVZYypxtNu_iACu5bIuujHgPXf5UCi5rcs79GfQ.webp);
+            background-size: cover;
+            background-position: 0px -100px;
+            position: relative;
+            margin: 10px;
+        }
+        .box4 {
+            background-image: url(https://i.namu.wiki/i/8qaOcPRiGmtWidDUCdc09D-OVtJGjKsFp6e8feDslbbaoQ321K2pH8WguQUEJTM5qxfcfHqGT76II30FPXiISA.webp);
+            background-size: cover;
+            background-position: 0px -100px;
+            position: relative;
+            margin: 0px auto;
+            width: 300px;
+            height: 250px;
+        }
+        .big_box {
+            display: flex;
+            width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .box {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+        }
+        .ho1 {
+            position: absolute;
+            top: 250px;
+            opacity: 0;
+            margin: 0 auto;
+            width: 300px;
+            height: 250px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            z-index: 1;
+        }
+        .ho2 {
+            position: absolute;
+            top: 200px;
+            opacity: 0;
+            margin: 0 auto;
+            width: 300px;
+            height: 250px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        .ho3 {
+            position: absolute;
+            top: 250px;
+            opacity: 0;
+            margin: 0 auto;
+            width: 300px;
+            height: 250px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        .ho4 {
+            position: absolute;
+            top: 250px;
+            opacity: 0;
+            margin: 0 auto;
+            width: 300px;
+            height: 250px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+        .box1:hover{
+            .ho1{
+                opacity: 1;
+                top: 0px;
+                background-color: rgba(0, 0, 0, 0.283);
+            }
+        }
+        .ho2 {
+            position: absolute;
+        }
+        .box2:hover{
+            .ho2{
+                opacity: 1;
+                top: 0px;
+                background-color: rgba(0, 0, 0, 0.283);
+            }
+        }
+        .ho3 {
+            position: absolute;
+        }
+        .box3:hover{
+            .ho3{
+                opacity: 1;
+                top: 0px;
+                background-color: rgba(0, 0, 0, 0.283);
+            }
+        }
+        .box4:hover{
+            .ho4{
+                opacity: 1;
+                top: 0px;
+                background-color: rgba(0, 0, 0, 0.283);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>마우스 올리면 상세 설명 표시</h1>
+    <div class="big_box">
+        <div class="box box1">
+            <div class="ho1"><br> 젠니</div>
+        </div>
+        <div class="box box2">
+            <div class="ho2"><br> 장리</div>
+        </div>
+        <div class="box box3">
+            <div class="ho3"><br> 칸타렐라</div>
+        </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="box box4">
+        <div class="ho4"><br> 음림</div>
+    </div>
+</body>
+</html>
