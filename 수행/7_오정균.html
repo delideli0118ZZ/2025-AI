@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7_오정균</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        user-select: none;
+      }
+      body {
+        background-color: #efefef;
+      }
+      img {
+        width: 200px;
+      }
+      .big_big_box {
+        width: 1000px;
+        margin: 30px auto;
+        display: grid;
+        gap: 10px;
+      }
+      .header {
+        align-items: center;
+
+        display: flex;
+        gap: 20px;
+      }
+      .a1 {
+        flex: 1;
+      }
+      .a2 img {
+        width: 50px;
+        border-radius: 100%;
+        background-color: black;
+      }
+      .a1:hover {
+        cursor: pointer;
+      }
+      .a2:hover {
+        cursor: pointer;
+      }
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .menu {
+        width: 250px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: orange;
+      }
+      .menu:hover {
+        background-color: rgba(255, 166, 0, 0.37);
+        cursor: pointer;
+      }
+      input {
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: 0;
+      }
+      button {
+        background-color: orange;
+        border: 0;
+        width: 45px;
+        height: 40px;
+        border-radius: 10px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .sec {
+        height: 360px;
+        border-radius: 10px;
+        background-color: white;
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .img_sec {
+        width: 250px;
+        height: 280px;
+      }
+      p {
+        font-size: 15px;
+        margin: 3px;
+      }
+      .sec:hover {
+        cursor: pointer;
+      }
+      .footer {
+        background-color: white;
+        height: 70px;
+        text-align: center;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big_big_box">
+      <div class="header">
+        <a class="a1"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Wuthering_Waves_logo.svg/2560px-Wuthering_Waves_logo.svg.png"
+            alt=""
+        /></a>
+        <input type="text" placeholder="   검색어 입력" />
+        <button type="submit">버튼</button>
+        <a class="a2"
+          ><img
+            src="https://cdn-store.leagueoflegends.co.kr/images/v2/emotes/3137.png"
+            alt=""
+        /></a>
+      </div>
+      <div class="nav">
+        <div class="menu menu1">메뉴1</div>
+        <div class="menu menu2">메뉴2</div>
+        <div class="menu menu3">메뉴3</div>
+        <div class="menu menu4">메뉴4</div>
+      </div>
+      <div class="grid">
+        <div class="sec sec1">
+          <img
+            class="img_sec"
+            src="https://mblogthumb-phinf.pstatic.net/MjAxODEyMDJfMjc5/MDAxNTQzNjk0NTEzNzcw.F6Tr0KAVN5DY2ZATU2Bf0QBpVN20tZJ9GtDkfgz4b1Mg.3umliJUTKk4LlnKP_Co4s3gn_6PSxgKTOWZMlaCDtmgg.JPEG.waitedforthismoment/IMG_4043.jpg?type=w800"
+            alt=""
+          />
+          <p>
+            어떤 일이든 한계점이 있다. 그런데 더 못 할 단계에서 계속하다보면
+            어느 순간 편안해진다.
+          </p>
+        </div>
+        <div class="sec sec2">
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/MjAxODEyMDJfMjI4/MDAxNTQzNjk0NTI1Njgx.8-WeOo044wjZkPktjfVWvmo5WVBSqTODzJjlqkeMZBgg.v_AJetW7DhlVNYmKYg-2AGDRxpbhrQtktXVcUrC8Jxsg.JPEG.waitedforthismoment/IMG_4033.jpg?type=w800"
+            alt=""
+            class="img_sec"
+          />
+          <p>세상에 안 되는 사람은 없다. 되는 데 안되는 길로 갈 뿐이다.</p>
+        </div>
+        <div class="sec sec3">
+          <img
+            src="https://i.pinimg.com/564x/70/15/88/70158889f7497cb17fc82d8ab1ffeee7.jpg"
+            alt=""
+            class="img_sec"
+          />
+          <p>소질은 누구나 있다. 소질이 실력이 되기까지 실천한 사람이 적다.</p>
+        </div>
+        <div class="sec sec4">
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/MjAxODEyMDJfMTk5/MDAxNTQzNjk0NTMyNjUy.ad1O7nbLAII0rtr8mmp9b-izMalr4w28Tv9smXVR3VIg.xCI6-3ZFd_ZabGlpV4msofy85Pa_gUyB8UTFIBxTRrQg.JPEG.waitedforthismoment/IMG_4028.jpg?type=w800"
+            alt=""
+            class="img_sec"
+          />
+          <p>
+            조금만 더 하면 되는데 끝까지 못하고 직전에 그만두는 사람이 너무
+            많다.
+          </p>
+        </div>
+        <div class="sec sec5">
+          <img
+            src="https://i.pinimg.com/736x/dc/ed/20/dced209e8a1701af2505ef736525365e.jpg"
+            alt=""
+            class="img_sec"
+          />
+          <p>다른 사람들의 말에 요동하지 말고 끝까지 해야 한다.</p>
+        </div>
+        <div class="sec sec6">
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/MjAxODEyMDJfMjkx/MDAxNTQzNjk0NTIzMTQx.1HiL6L89fzRoyvEagCD2QKylVWFcwgaOQM-WkV_HWx0g.N-LBteUzMhaAKmqXWaMhtdm2czWC3A9q9Zy1-Ay0I4og.JPEG.waitedforthismoment/IMG_4036.jpg?type=w800"
+            alt=""
+            class="img_sec"
+          />
+          <p>누군가에겐 소중하다.</p>
+        </div>
+        <div class="sec sec7">
+          <img
+            src="https://i.pinimg.com/1200x/62/13/8d/62138dda41038ac9adab0138532d02d6.jpg"
+            alt=""
+            class="img_sec"
+          />
+          <p>말 한마디로 큰 손해를 보고 고통을 받는다.</p>
+        </div>
+        <div class="sec sec8">
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/MjAxODEyMDJfMTk4/MDAxNTQzNjk0NTE1ODg1.NGrYmQVekkpmvpJaPaoiEK6RDEANr4CY9lPQVUrIth4g.NMqHM-bLHgtkF-0mohDnR7CHJYAVRSPi2S1wa8BK3fgg.JPEG.waitedforthismoment/IMG_4042.jpg?type=w800"
+            alt=""
+            class="img_sec"
+          />
+          <p>삶의 모든 시간을 목적을 이루는 기회로 삼고 가치있게 써야 한다.</p>
+        </div>
+      </div>
+      <div class="footer">
+        Copyright (c) 종로산업정보학교 AIcomputer Department 오정균 ALL rights
+        reserved. <br />본 사이트는 상업적 목적이 아닌 개인 포트폴리오로
+        제작되었습니다.
+      </div>
+    </div>
+  </body>
+</html>
