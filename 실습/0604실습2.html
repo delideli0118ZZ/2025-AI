@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>주문서</h1>
+    <h3>먹고 싶은 메뉴를 선택합니다</h3>
+    <input type="checkbox" class="치킨"> 치킨 16,000
+    <br><br>
+    <input type="checkbox" class="초밥"> 초밥 20,000
+    <br><br>
+    <input type="checkbox" class="순대"> 순대 5,000
+    <hr>
+    <h2>가격: 0</h2>
+    <script>
+        const 치킨 = document.querySelector(".치킨")
+        const 초밥 = document.querySelector(".초밥")
+        const 순대 = document.querySelector(".순대")
+        let 가격 = document.querySelector("h2")
+        let a = 1
+        let b = 1
+        let c = 1
+        let N = 0
+            치킨.addEventListener("click", function(e){
+                if (a==1){
+                    가격.textContent=`가격: ${N+=16000}`
+                    a+=1
+                }
+                else if (a!=1) {
+                    가격.textContent=`가격: ${N-=16000}`
+                    a-=1
+                }
+            })
+            초밥.addEventListener("click", function(e){
+                if (b==1){
+                    가격.textContent=`가격: ${N+=20000}`
+                    b+=1
+                }
+                else if (b!=1) {
+                    가격.textContent=`가격: ${N-=20000}`
+                    b-=1
+                }
+            })
+            순대.addEventListener("click", function(e){
+                if (c==1){
+                    가격.textContent=`가격: ${N+=5000}`
+                    c+=1
+                }
+                else if (c!=1) {
+                    가격.textContent=`가격: ${N-=5000}`
+                    c-=1
+                }
+            })
+    </script>
+</body>
+</html>
