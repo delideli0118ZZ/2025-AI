@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: 1s all;
+        }
+        .container {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+        .one {
+            position: absolute;
+            position: relative;
+            width: 350px;
+            height: 200px;
+            border: 1px solid black;
+            top: 150px;
+            left: 325px;
+        }
+        .two {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            border: 1px solid black;
+            top: 150px;
+            left: 825px;
+        }
+        .three {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            border: 1px solid black;
+            top: 150px;
+            left: 1325px;
+        }
+        .four {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            border: 1px solid black;
+            top: 150px;
+            left: -650px;
+        }
+        .five {
+            position: absolute;
+            width: 350px;
+            height: 200px;
+            border: 1px solid black;
+            top: 150px;
+            left: -175px;
+        }
+        .button {
+            display: flex;
+            position: absolute;
+            bottom: 10px;
+            left: 45%;
+        }
+        .button div {
+            border: 1px solid black;
+            height: 30px;
+            width: 50px;
+            text-align: center;
+        }
+        img {
+            width: 350px;
+            height: 200px;
+        }
+        .one:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <img src="https://cdn.khgames.co.kr/news/photo/202411/234439_269056_76.jpg" alt="">
+        </div>
+        <div class="two">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA4JARdenwEk8TdSQpNrAA_WBa9mERlRv1zg&s" alt="">
+        </div>
+        <div class="three">
+            <img src="https://blog.ko.playstation.com/tachyon/sites/9/2025/03/eca07c602c278b4c192ebd107bb7516f10824fd7-scaled.jpg?resize=1088%2C612&crop_strategy=smart" alt="">
+        </div>
+        <div class="four">
+            <img src="https://i.namu.wiki/i/M2V6hVwYpBEwBpWNhBnKttEroALxhYa8rvqxHsTxevswChkGc7L7FrxlAGUiM0f-JGkeA8s3I2io_95vsgzkpQ.webp" alt="">
+        </div>
+        <div class="five">
+            <img src="https://i.namu.wiki/i/1MhF6X3EcF1tUN8E0hkVP-EM2sdAq8Vh6EfyIUnCBw3W_FWEaAAowAW_1oMe6cpGGDcQWK4gX-aShKSUXqi8JA.webp" alt="">
+        </div>
+        <div class="button">
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+
+    </div>
+    <script>
+        let left = document.querySelector(".left")
+        let right = document.querySelector(".right")
+        let one = document.querySelector(".one")
+        let two = document.querySelector(".two")
+        let three = document.querySelector(".three")
+        let four = document.querySelector(".four")
+        let five = document.querySelector(".five")
+        let a = 1
+        right.addEventListener("click", function(e) {
+            if (a==1) {
+                three.style.transition='1s all'
+                three.style.opacity='1'
+                one.style.left= "-175px"
+                two.style.left= "325px"
+                three.style.left="825px"
+                four.style.left="1325px"
+                five.style.left="-650px"
+                four.style.transition='0s all'
+                four.style.opacity='0'
+                a++
+            }
+            else if (a==2){
+                four.style.transition='1s all'
+                four.style.opacity='1'
+                two.style.left= "-175px"
+                three.style.left= "325px"
+                four.style.left="825px"
+                five.style.left="1325px"
+                one.style.left="-650px"
+                five.style.transition='0s all'
+                five.style.opacity='0'
+                a++
+            }
+            else if (a==3){
+                five.style.transition='1s all'
+                five.style.opacity='1'
+                three.style.left= "-175px"
+                four.style.left= "325px"
+                five.style.left="825px"
+                one.style.left="1325px"
+                two.style.left="-650px"
+                one.style.transition='0s all'
+                one.style.opacity='0'
+                a++
+            }
+            else if (a==4){
+                one.style.transition='1s all'
+                one.style.opacity='1'
+                four.style.left= "-175px"
+                five.style.left= "325px"
+                one.style.left="825px"
+                two.style.left="1325px"
+                three.style.left="-650px"
+                two.style.transition='0s all'
+                two.style.opacity='0'
+                a++
+            }
+            else if (a==5){
+                two.style.transition='1s all'
+                two.style.opacity='1'
+                five.style.left= "-175px"
+                one.style.left= "325px"
+                two.style.left="825px"
+                three.style.left="1325px"
+                four.style.left="-650px"
+                three.style.transition='0s all'
+                three.style.opacity='0'
+                a=1
+            }
+        })
+        left.addEventListener("click",function(e){
+            if (a==1) {
+                four.style.transition='1s all'
+                four.style.opacity='1'
+                one.style.left="825px"
+                two.style.left="1325px"
+                three.style.left="-650px"
+                four.style.left="-175px"
+                five.style.left="325px"
+                three.style.transition='0s all'
+                three.style.opacity='0'
+                a=5
+            }
+            else if (a==5) {
+                three.style.transition='1s all'
+                three.style.opacity='1'
+                five.style.left="825px"
+                one.style.left="1325px"
+                two.style.left="-650px"
+                three.style.left="-175px"
+                four.style.left="325px"
+                two.style.transition='0s all'
+                two.style.opacity='0'
+                a=4
+            }
+            else if (a==4) {
+                two.style.transition='1s all'
+                two.style.opacity='1'
+                four.style.left="825px"
+                five.style.left="1325px"
+                one.style.left="-650px"
+                two.style.left="-175px"
+                three.style.left="325px"
+                one.style.transition='0s all'
+                one.style.opacity='0'
+                a=3
+            }
+            else if (a==3) {
+                one.style.transition='1s all'
+                one.style.opacity='1'
+                three.style.left="825px"
+                four.style.left="1325px"
+                five.style.left="-650px"
+                one.style.left="-175px"
+                two.style.left="325px"
+                five.style.transition='0s all'
+                five.style.opacity='0'
+                a=2
+            }
+            else if (a==2) {
+                five.style.transition='1s all'
+                five.style.opacity='1'
+                two.style.left="825px"
+                three.style.left="1325px"
+                four.style.left="-650px"
+                five.style.left="-175px"
+                one.style.left="325px"
+                four.style.transition='0s all'
+                four.style.opacity='0'
+                a=1
+            }
+        })
+
+    </script>
+</body>
+</html>
