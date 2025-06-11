@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      table {
+        width: 800px;
+        height: 120px;
+        margin: 0 auto;
+        font-size: 30px;
+      }
+      .tr1 td {
+        background-color: rgb(122, 240, 122);
+      }
+      .tr2 td {
+        background-color: rgb(243, 130, 149);
+      }
+      button {
+        border: 2px solid black;
+        width: 50px;
+        height: 40px;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로또 당첨 번호</h1>
+    <br />
+    <table>
+      <tr class="tr1">
+        <td>1번</td>
+        <td>2번</td>
+        <td>3번</td>
+        <td>4번</td>
+        <td>5번</td>
+        <td>6번</td>
+      </tr>
+      <tr class="tr2">
+        <td class="out1">0</td>
+        <td class="out2">0</td>
+        <td class="out3">0</td>
+        <td class="out4">0</td>
+        <td class="out5">0</td>
+        <td class="out6">0</td>
+      </tr>
+    </table>
+    <br />
+    <button>가자</button>
+    <script>
+      let button = document.querySelector("button");
+      function abcd(count, min, max) {
+        const numbers = new Set();
+
+        while (numbers.size < count) {
+          const rand = Math.floor(Math.random() * (max - min + 1)) + min;
+          numbers.add(rand);
+        }
+
+        return Array.from(numbers).sort((a, b) => a - b);
+      }
+      button.addEventListener("click", function (e) {
+        const rands = abcd(7, 1, 45);
+        for (let i = 1; i < 7; i++) {
+          const quer = document.querySelector(`.out${i}`);
+          quer.textContent = rands[i];
+        }
+      });
+    </script>
+  </body>
+</html>

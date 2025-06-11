@@ -1,25 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      div {
-        width: 200px;
-        padding: 20px;
-        margin: 20px;
-        border: 5px solid black;
-      }
-      a {
-        list-style: none;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .slide_wrapper {
+            position: relative;
+            width: 660px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slides.animated {
+            transition: all 0.5s;
+        }
+
+        .slides li {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+        }
+
+        .slides li:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .controls span {
+            width: 200px;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
     </style>
-  </head>
-  <body>
-    <li><a href="#">li</a></li>
-    <li><a href="#">li</a></li>
-    <li><a href="#">li</a></li>
-    <li><a href="#">li</a></li>
-  </body>
+</head>
+<body>
+    <div class="slide_wrapper">
+        <ul class="slides">
+            <li>slide 01</li>
+            <li>slide 02</li>
+            <li>slide 03</li>
+            <li>slide 04</li>
+            <li>slide 05</li>
+        </ul>
+    </div>
+
+    <p class="controls">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+    </p>
+
+    <script>
+        let slides = document.querySelector(".slides"),
+            slide = document.querySelectorAll(".slides li"),
+            n = 0,
+            count = slide.length,
+            slideWidth = 200,
+            slideMargin = 30,
+            prevBtn = document.querySelector(".prev"),
+            nextBtn = document.querySelector(".next"),
+            isAnimating = false
+
+        makeClone();
+
+        function makeClone() {
+            for (let i = 0; i < count; i++) {
+                let cloneSlide = slide[i].cloneNode(true)
+                cloneSlide.classList.add("clone")
+                slides.appendChild(cloneSlide)
+            }
+
+            for (let i = count - 1; i >= 0; i--) {
+                let cloneSlide = slide[i].cloneNode(true)
+                cloneSlide.classList.add("clone")
+                slides.prepend(cloneSlide)
+            }
+
+            updateWidth()
+            setInitialPos()
+            setTimeout(function () {
+                slides.classList.add("animated")
+            }, 100)
+        }
+
+        function updateWidth () {
+            let currentSlides = document.querySelectorAll(".slides li")
+            let newSlideCount = currentSlides.length
+
+            let newWidth = (slideWidth + slideMargin) * newSlideCount - slideMargin + "px"
+            slides.style.width = newWidth
+        }
+
+        function setInitialPos () {
+            let initialTranslateValue = -(slideWidth + slideMargin) * count
+            slides.style.transform = `translateX(${initialTranslateValue}px)`
+        }
+
+        prevBtn.addEventListener("click", function () {
+            if (!isAnimating) {
+                moveSlide(n - 1)
+            }
+        })
+
+        nextBtn.addEventListener("click", function () {
+            if (!isAnimating) {
+                moveSlide(n + 1)
+            }
+        })
+
+        function moveSlide (num) {
+            isAnimating =true
+            slides.style.transform = `translateX(-${(count + num) * (slideWidth + slideMargin)}px)`
+            n = num
+            console.log(n, count)
+            if (n === count || n === -count) {
+                setTimeout(function () {
+                    slides.classList.remove("animated")
+                    slides.style.transform = `translateX(-${count * (slideWidth + slideMargin)}px)`
+                    n = 0
+                }, 500)
+                setTimeout(function() {
+                    slides.classList.add("animated")
+                    isAnimating = false
+                }, 600)
+            } else {
+                setTimeout(function () {
+                    isAnimating = false
+                }, 500)
+            }
+        }
+    </script>
+</body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>입대일은 만 19세가 되는 날을 기준</h1>
+    <input class="인풋" type="text" placeholder="양식:2001.1.1" />
+    <button class="버튼">계산</button>
+    <h1 class="out2">살</h1>
+    <h1 class="out">?</h1>
+    <script>
+      let 인풋 = document.querySelector(".인풋");
+      let 버튼 = document.querySelector(".버튼");
+      let 아웃 = document.querySelector(".out");
+      let 아웃2 = document.querySelector(".out2");
+      버튼.addEventListener("click", function (e) {
+        let 나이 = 인풋.value.slice(0, 4);
+        나이 = 2026 - 나이;
+        if (인풋.value.slice(0, 4) < 2006) {
+          아웃.textContent = "입대 가능";
+          아웃2.textContent = `만 나이: ${나이}`;
+        } else if (인풋.value.slice(0, 4) < 2007) {
+          if (인풋.value.slice(6, 7) < 7) {
+            아웃.textContent = "입대 가능";
+            아웃2.textContent = `만 나이: ${나이}`;
+          }
+        } else {
+          아웃.textContent = "입대 불가능";
+          아웃2.textContent = `만 나이: ${나이}`;
+        }
+      });
+    </script>
+  </body>
+</html>
