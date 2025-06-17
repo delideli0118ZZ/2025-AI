@@ -47,7 +47,7 @@
             content: "";
             position: absolute;
             background-size: cover;
-            background-image: url(https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg);
+            background-image: url(https://i0.wp.com/tokyotreatblog.wpcomstaging.com/wp-content/uploads/2024/06/zojoji-temple.webp?resize=620%2C414&ssl=1);
             background-repeat: no-repeat;
             background-position: 50%;
             top: 0;
@@ -229,7 +229,7 @@
         <div class="big_box2 big_box">
             <div class="slide">
                 <div class="sl1">
-                    <img src="https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg" />
+                    <img src="https://i0.wp.com/tokyotreatblog.wpcomstaging.com/wp-content/uploads/2024/06/zojoji-temple.webp?resize=620%2C414&ssl=1" />
                     <div class="cont1">Tokyo</div>
                 </div>
                 <div class="sl2">
@@ -243,8 +243,8 @@
                 </div>
                 <div class="sl4">
                     <img
-                        src="https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg" />
-                    <div class="cont4">New York</div>
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/e4/10/e4/it-was-an-amazing-experience.jpg?w=500&h=500&s=1" />
+                    <div class="cont4">Beijing</div>
                 </div>
                 <div class="sl5">
                     <img src="https://media.architecturaldigest.com/photos/57ad893acfc37bc171ad8082/master/pass/madrid-travel-guide.jpg" />
@@ -286,6 +286,8 @@
         let cont5 = document.querySelector(".cont5");
         let cont6 = document.querySelector(".cont6");
         let cont7 = document.querySelector(".cont7");
+
+        let back = document.querySelector(".big_box")
         let a = 1;
         let 아이콘 = document.querySelector(".icon");
         const 나라 = document.querySelector(".나라");
@@ -293,14 +295,7 @@
         const 체감온도 = document.querySelector(".체감온도");
         const 풍속 = document.querySelector(".풍속");
         const 습도 = document.querySelector(".습도");
-        axios
-            .get(
-                "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
-            )
-            .then(function (response) { })
-            .catch(function (error) {
-                console.log(error);
-            });
+
         left.addEventListener("click", function (e) {
             if (a == 1) {
                 sl5.style.transition = "1s all";
@@ -351,6 +346,7 @@
                 sl5.style.left = "10%";
                 sl6.style.left = "50%";
                 나라.textContent = "Rome";
+                back.style.backgroundImage="https://as1.ftcdn.net/jpg/01/18/83/96/1000_F_118839618_CXhlQfjgZE18EdvHG6dmPwnADgFaFB8I.jpg"
                 axios
                 .get(
                     "https://api.openweathermap.org/data/2.5/weather?q=rome&appid=013debb1fece8d02eb487db2cb357845"
@@ -414,10 +410,10 @@
                 sl2.style.left = "-30%";
                 sl3.style.left = "10%";
                 sl4.style.left = "50%";
-                나라.textContent = "New York";
+                나라.textContent = "Beijing";
                 axios
                 .get(
-                    "https://api.openweathermap.org/data/2.5/weather?q=newyork&appid=013debb1fece8d02eb487db2cb357845"
+                    "https://api.openweathermap.org/data/2.5/weather?q=beijing&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
@@ -609,10 +605,10 @@
                 sl2.style.left = "-30%";
                 sl3.style.left = "10%";
                 sl4.style.left = "50%";
-                나라.textContent = "New York";
+                나라.textContent = "Beijing";
                 axios
                 .get(
-                    "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
+                    "https://api.openweathermap.org/data/2.5/weather?q=beijing&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
                         console.log(response);
