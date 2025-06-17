@@ -217,7 +217,7 @@
     <div class="container">
         <div class="big_box1 big_box">
             <div class="design">
-                <img src="" alt="" class="icon" />
+                <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="" class="icon" />
                 <div class="나라">Tokyo</div>
                 <div class="기온">27.3C</div>
                 <div class="체감온도">feel 30C</div>
@@ -328,6 +328,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute=('src','https://openweathermap.org/img/wn/04d@2x.png')
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -603,14 +604,15 @@
                 나라.textContent = "New York";
                 axios
                 .get(
-                    "https://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=013debb1fece8d02eb487db2cb357845"
+                    "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
-                        아이콘.setAttribute=('src',)
+                        아이콘.setAttribute=('src','https://openweathermap.org/img/wn/04d@2x.png')
                     })
                     .catch(function (error) {
                 console.log(error);
