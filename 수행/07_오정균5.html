@@ -217,7 +217,7 @@
     <div class="container">
         <div class="big_box1 big_box">
             <div class="design">
-                <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="" class="icon" />
+                <img src="" alt="" class="icon" />
                 <div class="나라">Tokyo</div>
                 <div class="기온">27.3C</div>
                 <div class="체감온도">feel 30C</div>
@@ -328,7 +328,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
-                        아이콘.setAttribute=('src','https://openweathermap.org/img/wn/04d@2x.png')
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -360,6 +360,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -391,6 +392,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -422,6 +424,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -453,6 +456,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -484,6 +488,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -515,6 +520,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -549,6 +555,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -580,6 +587,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -612,7 +620,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
-                        아이콘.setAttribute=('src','https://openweathermap.org/img/wn/04d@2x.png')
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -644,6 +652,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -675,6 +684,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -706,6 +716,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
@@ -737,6 +748,7 @@
                         체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute('src',`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
                     })
                     .catch(function (error) {
                 console.log(error);
