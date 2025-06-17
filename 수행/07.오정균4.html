@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            line-height: 60px;
+            border-bottom: 2px solid black;
+        }
+        .head_left {
+            display: flex;
+            flex: 1;
+            width: 50px;
+        }
+        .head_left div:hover {
+            cursor: pointer;
+        }
+        .head_left div {
+            margin: 0 20px;
+        }
+        .head_center {
+            flex: 1;
+            width: 50px;
+        }
+        .hh1:hover {
+            cursor: pointer;
+        }
+        .hh1 {
+            width: 115px;
+        }
+        .main {
+            background-color: rgb(128, 243, 128);
+            padding: 50px;
+            border-bottom: 2px solid black;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin-left: -20px;
+        }
+        li {
+            margin: 0 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            padding: 10px;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+        .autoslide {
+            line-height: 50px;
+        }
+        .dlfqks {
+            text-align: center;
+            background-color: rgb(246, 246, 135);
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+        }
+        .vpdlem {
+            text-align: center;
+            background-color: rgb(124, 124, 237);
+            border-bottom: 2px solid black;
+        }
+        .slide2 {
+            position: relative;
+        }
+        .but {
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px black;
+        }
+        .but:hover {
+            cursor: pointer;
+        }
+        .but2:hover {
+            cursor: pointer;
+        }
+        .slide2_button1 {
+            top: 42%;
+            left: 1%;
+        }
+        .slide2_button2 {
+            top: 42%;
+            right: 1%;
+        }
+        .slide2_img {
+            width: 100%;
+            height: 370px;
+        }
+        .img3 {
+            width: 100%;
+            height: 370px;
+            position: absolute;
+        }
+        .slide3 {
+            position: relative;
+            width: 100%;
+            height: 370px;
+        }
+        .but2 {
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px black;
+            z-index: 11;
+        }
+        .slide3_button1 {
+            top: 45%;
+            left: 1%;
+        }
+        .slide3_button2 {
+            top: 45%;
+            right: 1%;
+        }
+        .head_right {
+            display: flex;
+        }
+        .imgg {
+            width: 50px;
+            height: 50px;
+        }
+        .imgg:hover {
+            cursor: pointer;
+        }
+        body {
+            overflow: hidden;
+        }
+        .autoslide {
+            width: 100%;
+            height: 50px;
+        }
+        .slide3_img1 {
+            opacity: 1;
+        }
+        .slide3_img2 {
+            opacity: 0;
+        }
+        .slide3_img3 {
+            opacity: 0;
+        }
+        .autoslide {
+            position: relative;
+            left: 0px;
+            overflow: hidden;
+            width: 10000px;
+        }
+        .auto {
+            position: absolute;
+        }
+        .autoslide:hover {
+                transition:1s;
+                left: -10000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="head_left">
+                <div class="about">ABOUT</div>
+                <div class="fortfolid">FORTFOLID</div>
+                <div class="album">ALBUM</div>
+                <div class="contact">CONTACK</div>
+            </div>
+            <div class="head_center"><h1 class="hh1">AI-COM</h1></div>
+            <div class="head_right">
+                <img class="imgg"        src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIy/MDAxNjE0ODYzMTQyOTkw.1Beapoh6ek4Ouh_LXme-qwqbttseqCq0Sji0qyW1BwYg.DyYGEZ_eYFC09tqxEyKhiJGfEv5-bi3bxflk82_I0_gg.PNG.jch950222/bee_happy.png?type=w420" alt="">
+                <img class="imgg"    src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDRfMjIx/MDAxNjE0ODYzMTQzMjc3.1PoSBzr3RvOXzmmFNUyYxjHVepkTsTw1DYM4VHqJcbMg.TiC2z3t8vAzpBCdLZMg-hThy4kJP733B-b9-VKEXXvkg.PNG.jch950222/bee_sad.png?type=w420" alt="">
+                <img class="imgg"    src="https://media.bunjang.co.kr/images/crop/768072619_w320.jpg" alt="">
+            </div>
+        </div>
+        <div class="main">
+            <h1>AI 컴퓨터과</h1>
+            <br>
+            <h2>이곳에서 펼쳐질 찬란한 내 삶을 위해</h2>
+            <br>
+            <p>"수행 난이도 무엇??? <br>진짜 무엇?</p>
+            <br>
+            <ul>
+                <li class="li1">학과 소개</li>
+                <li class="li2">교육 과정</li>
+                <li class="li3">구성원 안내</li>
+                <li class="li4">프로그램 소개</li>
+                <li class="li5">앨범</li>
+                <li class="li6">동아리 활동</li>
+            </ul>
+        </div>
+        <div class="autoslide">
+            <div class="auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sapiente dignissimos autem quasi? Aliquid itaque impedit rem, voluptatem quaerat atque temporibus eveniet, labore maxime omnis suscipit iste quam corrupti at! Consequatur magnam, tempore quo aut minima dolorum voluptatum quibusdam, dolor deleniti exercitationem, aperiam mollitia consectetur saepe facere iste voluptates. Fugiat dolore dolores ut eligendi ea veritatis fugit eaque quaerat maxime repellendus corporis tempore impedit inventore placeat earum id beatae, aliquid accusantium, voluptate consequuntur iste qui labore! Amet omnis numquam nesciunt at fugiat corporis odio vitae iure magni consequatur reiciendis, nihil veniam similique debitis totam inventore doloribus? Ipsam, adipisci. Eos, ea consectetur. Voluptatum aut eligendi incidunt, sit suscipit a fugit temporibus libero fugiat maxime mollitia cumque cum provident laborum quam corrupti dolorum modi ullam tempore distinctio aperiam eveniet delectus aliquid. Sed incidunt animi excepturi earum. Beatae, alias a. Id unde numquam delectus quaerat hic 
+            </div>
+            </div>
+        <h1 class="dlfqks">일반 슬라이드</h1>
+        <div class="slide2">
+            <img class="slide2_img" src="https://img.freepik.com/free-photo/panoramic-sea_1048-2667.jpg?semt=ais_hybrid&w=740" alt="">
+            <div class="slide2_button1 but"><</div>
+            <div class="slide2_button2 but">></div>
+        </div>
+        <div class="slide3">
+            <h1 class="vpdlem">페이드</h1>
+            <img src="https://www.shutterstock.com/image-illustration/suburban-horizontal-landscape-vector-forest-260nw-1792933978.jpg" alt="" class="slide3_img1 img3">
+            <img src="https://www.koreanart21.com/system/webzine/viewPhotoFile.php?key=OTMyNixpMTcwMjIwNTA2MzY4MC5qcGcsOTAw" alt="" class="slide3_img2 img3">
+            <img src="https://img.freepik.com/free-vector/autumn-park-metal-fence-road-with-sidewalk_107791-16058.jpg?semt=ais_hybrid&w=740" alt="" class="slide3_img3 img3">
+            <div class="slide3_button1 but2"><</div>
+            <div class="slide3_button2 but2">></div>
+        </div>
+    </div>
+    
+    
+    <script>
+        let slide2_but1 = document.querySelector(".slide2_button1")
+        let slide2_but2 = document.querySelector(".slide2_button2")
+        let slide2_img = document.querySelector(".slide2_img")
+        let slide3_but1 = document.querySelector(".slide3_button1")
+        let slide3_but2 = document.querySelector(".slide3_button2")
+        let slide3_img1 = document.querySelector("slide3_img1")
+        let slide3_img2 = document.querySelector("slide3_img2")
+        let slide3_img3 = document.querySelector("slide3_img3")
+        let autoo=document.querySelector(".autoo")
+        let a=1
+        let b=1
+        let c=1
+        let move=0
+        /*let auto = document.querySelector(".autoslide")
+        for (let i=1;i<100;i++){
+            autoo.style.transitiion='3s all'
+            autoo.style.left=`${move}px`
+            move-=10
+        }*/
+        slide2_but1.addEventListener("click",function(e) {
+            if (a==1){
+                slide2_img.setAttribute('src','https://images.unsplash.com/photo-1684403527658-e435d1934fe0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8')
+                a=3
+            }
+            else if (a==3){
+                slide2_img.setAttribute('src','https://img.seoul.co.kr/img/upload/2024/09/09/SSC_20240909102642_O2.jpg')
+                a=2
+            }
+            else if (a==2){
+                slide2_img.setAttribute('src','https://img.freepik.com/free-photo/panoramic-sea_1048-2667.jpg?semt=ais_hybrid&w=740')
+                a=1
+            }
+        })
+        slide2_but2.addEventListener("click", function() {
+            if (a==1){
+                slide2_img.setAttribute('src','https://img.seoul.co.kr/img/upload/2024/09/09/SSC_20240909102642_O2.jpg')
+                a=2
+            }
+            else if (a==2){
+                slide2_img.setAttribute('src','https://images.unsplash.com/photo-1684403527658-e435d1934fe0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8')
+                a=3
+            }
+            else if (a==3){
+                slide2_img.setAttribute('src','https://img.freepik.com/free-photo/panoramic-sea_1048-2667.jpg?semt=ais_hybrid&w=740')
+                a=1
+            }
+        })
+        console.log(slide3_img1)
+        slide3_but1.addEventListener("click",function(e) {
+            if (b==1){
+                slide3_img1.style.opacity='0';
+                slide3_img3.style.opacity='1';
+                b=3;
+            }
+            else if (b==3){
+                slide3_img3.style.opacity='0';
+                slide3_img2.style.opacity='1';
+                b=2;
+            }
+            else if (b==2){
+                slide3_img2.style.opacity='0';
+                slide3_img1.style.opacity='1';
+                b=1;
+            }
+        })
+        slide3_but2.addEventListener("click",function(e) {
+            if (b==1){
+                slide3_img1.style.opacity='0';
+                slide3_img2.style.opacity='1';
+                b=2;
+            }
+            else if (b==2){
+                slide3_img2.style.opacity='0';
+                slide3_img3.style.opacity='1';
+                b=3;
+            }
+            else if (b==3){
+                slide3_img3.style.opacity='0';
+                slide3_img1.style.opacity='1';
+                b=1;
+            }
+        })
+    </script>
+</body>
+</html>

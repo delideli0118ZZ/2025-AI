@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather API Example</title>
+  </head>
+
+  <body>
+    <script>
+      const lat = 60;
+      const lon = 120;
+      const APIkey = "c3d2fcf16fd6dbb2fa468b4237bf6d3e";
+
+      axios
+        .get("https://api.openweathermap.org/data/3.0/onecall", {
+          params: {
+            lat: lat,
+            lon: lon,
+            appid: APIkey,
+          },
+        })
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.error("에러 발생:", error);
+        });
+    </script>
+  </body>
+</html>

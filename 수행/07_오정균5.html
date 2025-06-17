@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+            user-select: none;
+            transition: 1s all;
+        }
+
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .big_box {
+            border: 1px solid black;
+        }
+
+        .big_box1 {
+            position: fixed;
+            position: relative;
+            width: 40%;
+            height: 1200px;
+            margin: 30px;
+            z-index: 1;
+            border: 2px solid white;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+        }
+
+        .big_box1::after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            background-size: cover;
+            background-image: url(https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .design {
+            position: absolute;
+            left: 15%;
+            top: 30%;
+            position: relative;
+            width: 300px;
+        }
+
+        .design div {
+            text-shadow: 3px 3px 3px black;
+            margin: 10px;
+        }
+
+        .나라 {
+            font-size: 50px;
+        }
+
+        .기온 {
+            font-size: 80px;
+        }
+
+        .체감온도 {
+            font-size: 30px;
+        }
+
+        .풍속 {
+            font-size: 30px;
+        }
+
+        .습도 {
+            font-size: 30px;
+        }
+
+        .big_box2 {
+            position: absolute;
+            left: 42%;
+            top: 0px;
+            width: 57%;
+            height: 35%;
+            border: 2px solid white;
+            text-align: center;
+            border-top-right-radius: 20px;
+            overflow: hidden;
+        }
+
+        .but {
+            margin: -80px auto;
+            width: 100px;
+            border-radius: 18px;
+            display: flex;
+            border: 2px solid white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .but div {
+            margin: 10px;
+        }
+
+        .left:hover {
+            cursor: pointer;
+        }
+
+        .right:hover {
+            cursor: pointer;
+        }
+
+        .slide {
+            position: relative;
+            width: 1000px;
+            height: 300px;
+            margin: 50px;
+            display: flex;
+        }
+
+        .slide div {
+            position: absolute;
+        }
+
+        .slide div img {
+            width: 350px;
+            height: 200px;
+        }
+
+        .sl1 {
+            left: 50%;
+            margin: 0 auto;
+        }
+
+        .sl2 {
+            left: 90%;
+            margin: 0 auto;
+        }
+
+        .sl3 {
+            left: 130%;
+            margin: 0 auto;
+        }
+
+        .sl4 {
+            left: 170%;
+            margin: 0 auto;
+        }
+
+        .sl5 {
+            left: -70%;
+            margin: 0 auto;
+        }
+
+        .sl6 {
+            left: -30%;
+            margin: 0 auto;
+        }
+
+        .sl7 {
+            left: 10%;
+            margin: 0 auto;
+        }
+
+        .cont1 {
+            position: absolute;
+            left: 40%;
+            font-size: 25px;
+        }
+
+        .cont2 {
+            position: absolute;
+            left: 45%;
+        }
+
+        .cont3 {
+            position: absolute;
+            left: 45%;
+        }
+
+        .cont4 {
+            position: absolute;
+            left: 40%;
+        }
+
+        .cont5 {
+            position: absolute;
+            left: 45%;
+        }
+
+        .cont6 {
+            position: absolute;
+            left: 45%;
+        }
+
+        .cont7 {
+            position: absolute;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="big_box1 big_box">
+            <div class="design">
+                <img src="" alt="" class="icon" />
+                <div class="나라">Tokyo</div>
+                <div class="기온">27.3C</div>
+                <div class="체감온도">feel 30C</div>
+                <div class="풍속">2.34m/s</div>
+                <div class="습도">60%</div>
+            </div>
+        </div>
+
+        <div class="big_box2 big_box">
+            <div class="slide">
+                <div class="sl1">
+                    <img src="https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg" />
+                    <div class="cont1">Tokyo</div>
+                </div>
+                <div class="sl2">
+                    <img
+                        src="https://i0.wp.com/touristjourney.com/wp-content/uploads/2025/01/Golden-Sunset-Over-Seoul-Urban-Nightscape-Seoul-Korea-scaled.jpg?fit=2560%2C1707&ssl=1" />
+                    <div class="cont2">Seoul</div>
+                </div>
+                <div class="sl3">
+                    <img src="https://149990825.v2.pressablecdn.com/wp-content/uploads/2023/09/London4.jpg" />
+                    <div class="cont3">London</div>
+                </div>
+                <div class="sl4">
+                    <img
+                        src="https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg" />
+                    <div class="cont4">New York</div>
+                </div>
+                <div class="sl5">
+                    <img src="https://media.architecturaldigest.com/photos/57ad893acfc37bc171ad8082/master/pass/madrid-travel-guide.jpg" />
+                    <div class="cont5">Madrid</div>
+                </div>
+                <div class="sl6">
+                    <img src="https://darkrome.com/media/20502/rome-colosseum-city-tour-of-rome.jpg" />
+                    <div class="cont6">Rome</div>
+                </div>
+                <div class="sl7">
+                    <img
+                        src="https://as1.ftcdn.net/jpg/01/18/83/96/1000_F_118839618_CXhlQfjgZE18EdvHG6dmPwnADgFaFB8I.jpg" />
+                    <div class="cont7">Dubai</div>
+                </div>
+            </div>
+            <div class="but">
+                <div class="left">left</div>
+                <div class="right">right</div>
+            </div>
+        </div>
+        <div class="big_box3 big_box"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let left = document.querySelector(".left");
+        let right = document.querySelector(".right");
+        let sl1 = document.querySelector(".sl1");
+        let sl2 = document.querySelector(".sl2");
+        let sl3 = document.querySelector(".sl3");
+        let sl4 = document.querySelector(".sl4");
+        let sl5 = document.querySelector(".sl5");
+        let sl6 = document.querySelector(".sl6");
+        let sl7 = document.querySelector(".sl7");
+        let cont1 = document.querySelector(".cont1");
+        let cont2 = document.querySelector(".cont2");
+        let cont3 = document.querySelector(".cont3");
+        let cont4 = document.querySelector(".cont4");
+        let cont5 = document.querySelector(".cont5");
+        let cont6 = document.querySelector(".cont6");
+        let cont7 = document.querySelector(".cont7");
+        let a = 1;
+        let 아이콘 = document.querySelector(".icon");
+        const 나라 = document.querySelector(".나라");
+        const 기온 = document.querySelector(".기온");
+        const 체감온도 = document.querySelector(".체감온도");
+        const 풍속 = document.querySelector(".풍속");
+        const 습도 = document.querySelector(".습도");
+        axios
+            .get(
+                "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
+            )
+            .then(function (response) { })
+            .catch(function (error) {
+                console.log(error);
+            });
+        left.addEventListener("click", function (e) {
+            if (a == 1) {
+                sl5.style.transition = "1s all";
+                sl5.style.opacity = "1";
+                sl4.style.transition = "0s all";
+                sl4.style.opacity = "0";
+                cont7.style.left = "41%";
+                cont7.style.fontSize = "25px";
+                cont1.style.left = "45%";
+                cont1.style.fontSize = "16px";
+                sl1.style.left = "90%";
+                sl2.style.left = "130%";
+                sl3.style.left = "170%";
+                sl4.style.left = "-70%";
+                sl5.style.left = "-30%";
+                sl6.style.left = "10%";
+                sl7.style.left = "50%";
+                나라.textContent = "Dubai";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 7;
+            } else if (a == 7) {
+                sl4.style.transition = "1s all";
+                sl4.style.opacity = "1";
+                sl3.style.transition = "0s all";
+                sl3.style.opacity = "0";
+                cont6.style.left = "41%";
+                cont6.style.fontSize = "25px";
+                cont7.style.left = "45%";
+                cont7.style.fontSize = "16px";
+                sl7.style.left = "90%";
+                sl1.style.left = "130%";
+                sl2.style.left = "170%";
+                sl3.style.left = "-70%";
+                sl4.style.left = "-30%";
+                sl5.style.left = "10%";
+                sl6.style.left = "50%";
+                나라.textContent = "Rome";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=rome&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 6;
+            } else if (a == 6) {
+                sl3.style.transition = "1s all";
+                sl3.style.opacity = "1";
+                sl2.style.transition = "0s all";
+                sl2.style.opacity = "0";
+                cont5.style.left = "41%";
+                cont5.style.fontSize = "25px";
+                cont6.style.left = "45%";
+                cont6.style.fontSize = "16px";
+                sl6.style.left = "90%";
+                sl7.style.left = "130%";
+                sl1.style.left = "170%";
+                sl2.style.left = "-70%";
+                sl3.style.left = "-30%";
+                sl4.style.left = "10%";
+                sl5.style.left = "50%";
+                나라.textContent = "Madrid";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 5;
+            } else if (a == 5) {
+                sl2.style.transition = "1s all";
+                sl2.style.opacity = "1";
+                sl1.style.transition = "0s all";
+                sl1.style.opacity = "0";
+                cont4.style.left = "36%";
+                cont4.style.fontSize = "25px";
+                cont5.style.left = "45%";
+                cont5.style.fontSize = "16px";
+                sl5.style.left = "90%";
+                sl6.style.left = "130%";
+                sl7.style.left = "170%";
+                sl1.style.left = "-70%";
+                sl2.style.left = "-30%";
+                sl3.style.left = "10%";
+                sl4.style.left = "50%";
+                나라.textContent = "New York";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=newyork&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 4;
+            } else if (a == 4) {
+                sl1.style.transition = "1s all";
+                sl1.style.opacity = "1";
+                sl7.style.transition = "0s all";
+                sl7.style.opacity = "0";
+                cont3.style.left = "36%";
+                cont3.style.fontSize = "25px";
+                cont4.style.left = "45%";
+                cont4.style.fontSize = "16px";
+                sl4.style.left = "90%";
+                sl5.style.left = "130%";
+                sl6.style.left = "170%";
+                sl7.style.left = "-70%";
+                sl1.style.left = "-30%";
+                sl2.style.left = "10%";
+                sl3.style.left = "50%";
+                나라.textContent = "London";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=london&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 3;
+            } else if (a == 3) {
+                sl7.style.transition = "1s all";
+                sl7.style.opacity = "1";
+                sl6.style.transition = "0s all";
+                sl6.style.opacity = "0";
+                cont2.style.left = "41%";
+                cont2.style.fontSize = "25px";
+                cont3.style.left = "45%";
+                cont3.style.fontSize = "16px";
+                sl3.style.left = "90%";
+                sl4.style.left = "130%";
+                sl5.style.left = "170%";
+                sl6.style.left = "-70%";
+                sl7.style.left = "-30%";
+                sl1.style.left = "10%";
+                sl2.style.left = "50%";
+                나라.textContent = "Seoul";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 2;
+            } else if (a == 2) {
+                sl6.style.transition = "1s all";
+                sl6.style.opacity = "1";
+                sl5.style.transition = "0s all";
+                sl5.style.opacity = "0";
+                cont1.style.left = "41%";
+                cont1.style.fontSize = "25px";
+                cont2.style.left = "45%";
+                cont2.style.fontSize = "16px";
+                sl2.style.left = "90%";
+                sl3.style.left = "130%";
+                sl4.style.left = "170%";
+                sl5.style.left = "-70%";
+                sl6.style.left = "-30%";
+                sl7.style.left = "10%";
+                sl1.style.left = "50%";
+                나라.textContent = "Tokyo";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 1;
+            }
+        });
+        right.addEventListener("click", function (e) {
+            if (a == 1) {
+                sl4.style.transition = "1s all";
+                sl4.style.opacity = "1";
+                sl5.style.transition = "0s all";
+                sl5.style.opacity = "0";
+                cont2.style.left = "41%";
+                cont2.style.fontSize = "25px";
+                cont1.style.left = "45%";
+                cont1.style.fontSize = "16px";
+                sl3.style.left = "90%";
+                sl4.style.left = "130%";
+                sl5.style.left = "170%";
+                sl6.style.left = "-70%";
+                sl7.style.left = "-30%";
+                sl1.style.left = "10%";
+                sl2.style.left = "50%";
+                나라.textContent = "Seoul";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 2;
+            } else if (a == 2) {
+                sl5.style.transition = "1s all";
+                sl5.style.opacity = "1";
+                sl6.style.transition = "0s all";
+                sl6.style.opacity = "0";
+                cont3.style.left = "38%";
+                cont3.style.fontSize = "25px";
+                cont2.style.left = "45%";
+                cont2.style.fontSize = "16px";
+                sl4.style.left = "90%";
+                sl5.style.left = "130%";
+                sl6.style.left = "170%";
+                sl7.style.left = "-70%";
+                sl1.style.left = "-30%";
+                sl2.style.left = "10%";
+                sl3.style.left = "50%";
+                나라.textContent = "London";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=london&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 3;
+            } else if (a == 3) {
+                sl6.style.transition = "1s all";
+                sl6.style.opacity = "1";
+                sl7.style.transition = "0s all";
+                sl7.style.opacity = "0";
+                cont4.style.left = "35%";
+                cont4.style.fontSize = "25px";
+                cont3.style.left = "45%";
+                cont3.style.fontSize = "16px";
+                sl5.style.left = "90%";
+                sl6.style.left = "130%";
+                sl7.style.left = "170%";
+                sl1.style.left = "-70%";
+                sl2.style.left = "-30%";
+                sl3.style.left = "10%";
+                sl4.style.left = "50%";
+                나라.textContent = "New York";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                        아이콘.setAttribute=('src',)
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 4;
+            } else if (a == 4) {
+                sl7.style.transition = "1s all";
+                sl7.style.opacity = "1";
+                sl1.style.transition = "0s all";
+                sl1.style.opacity = "0";
+                cont5.style.left = "41%";
+                cont5.style.fontSize = "25px";
+                cont4.style.left = "45%";
+                cont4.style.fontSize = "16px";
+                sl6.style.left = "90%";
+                sl7.style.left = "130%";
+                sl1.style.left = "170%";
+                sl2.style.left = "-70%";
+                sl3.style.left = "-30%";
+                sl4.style.left = "10%";
+                sl5.style.left = "50%";
+                나라.textContent = "Madrid";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 5;
+            } else if (a == 5) {
+                sl1.style.transition = "1s all";
+                sl1.style.opacity = "1";
+                sl2.style.transition = "0s all";
+                sl2.style.opacity = "0";
+                cont6.style.left = "41%";
+                cont6.style.fontSize = "25px";
+                cont5.style.left = "45%";
+                cont5.style.fontSize = "16px";
+                sl7.style.left = "90%";
+                sl1.style.left = "130%";
+                sl2.style.left = "170%";
+                sl3.style.left = "-70%";
+                sl4.style.left = "-30%";
+                sl5.style.left = "10%";
+                sl6.style.left = "50%";
+                나라.textContent = "Rome";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=rome&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 6;
+            } else if (a == 6) {
+                sl2.style.transition = "1s all";
+                sl2.style.opacity = "1";
+                sl3.style.transition = "0s all";
+                sl3.style.opacity = "0";
+                cont7.style.left = "41%";
+                cont7.style.fontSize = "25px";
+                cont6.style.left = "45%";
+                cont6.style.fontSize = "16px";
+                sl1.style.left = "90%";
+                sl2.style.left = "130%";
+                sl3.style.left = "170%";
+                sl4.style.left = "-70%";
+                sl5.style.left = "-30%";
+                sl6.style.left = "10%";
+                sl7.style.left = "50%";
+                나라.textContent = "Dubai";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 7;
+            } else if (a == 7) {
+                sl3.style.transition = "1s all";
+                sl3.style.opacity = "1";
+                sl4.style.transition = "0s all";
+                sl4.style.opacity = "0";
+                cont1.style.left = "41%";
+                cont1.style.fontSize = "25px";
+                cont7.style.left = "45%";
+                cont7.style.fontSize = "16px";
+                sl2.style.left = "90%";
+                sl3.style.left = "130%";
+                sl4.style.left = "170%";
+                sl5.style.left = "-70%";
+                sl6.style.left = "-30%";
+                sl7.style.left = "10%";
+                sl1.style.left = "50%";
+                나라.textContent = "Tokyo";
+                axios
+                .get(
+                    "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
+                    )
+                    .then(function (response) { 
+                        기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        체감온도.textContent = `${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
+                        풍속.textContent = `${response.data.wind.speed}m/s`;
+                        습도.textContent = `${response.data.main.humidity}%`;
+                    })
+                    .catch(function (error) {
+                console.log(error);
+            });
+                a = 1;
+            }
+        });
+    </script>
+</body>
+
+</html>
