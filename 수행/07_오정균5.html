@@ -49,7 +49,7 @@
         .design {
             position: absolute;
             left: 15%;
-            top: 30%;
+            top: 25%;
             position: relative;
             width: 300px;
             opacity: 1;
@@ -81,6 +81,12 @@
         }
 
         .습도 {
+            font-size: 30px;
+        }
+        .최고 {
+            font-size: 30px;
+        }
+        .최저 {
             font-size: 30px;
         }
 
@@ -195,7 +201,7 @@
 
         .cont5 {
             position: absolute;
-            left: 45%;
+            left: 40%;
         }
 
         .cont6 {
@@ -234,7 +240,7 @@
             top: 74%;
             width: 100%;
             height: 30%;
-            background-color: rgba(0, 0, 0, 0.699);
+            background-color: rgba(0, 0, 0, 0.557);
             text-align: center;
         }
         p {
@@ -244,6 +250,14 @@
         }
         .옷 {
             width: 100px;
+        }
+        .header {
+            position: absolute;
+            width: 100%;
+            background-color:  rgba(0, 0, 0, 0.342);
+            color: white;
+            height: 40px;
+            text-align: center;
         }
     </style>
 </head>
@@ -258,10 +272,15 @@
                 <div class="체감온도">feel ??</div>
                 <div class="풍속">??m/s</div>
                 <div class="습도">?%</div>
+                <div class="최고">??</div>
+                <div class="최저">??</div>
             </div>
         </div>
 
         <div class="big_box2 big_box">
+            <div class="header">
+                <h2 class="header">안녕하세요!</h2>
+            </div>
             <div class="slide">
                 <div class="sl1">
                     <img src="https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg" />
@@ -310,7 +329,7 @@
                 <div class="풍향">?</div>
                 <div><img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_CABEC01ED6D413AEBD99B46549F77627.jpg" alt="옷"  class="옷"    ></div>
             </div>
-            <div class="footer"><p>어나잉ㅇㅁ너ㅏㅇㅁ너ㅏㅇㄴ미ㅓㅏ <br> ㅇ명미ㅏㅓㅇㅁ냐ㅣㅓ</p></div>
+            <div class="footer"><p>made by 오정균 <br> 그저 포트폴리오이며 상업적으로 사용하지 않는다는 내용<br> weather app 만들기</p></div>
         </div>
     </div>
 
@@ -332,6 +351,7 @@
         let cont5 = document.querySelector(".cont5");
         let cont6 = document.querySelector(".cont6");
         let cont7 = document.querySelector(".cont7");
+        let header = document.querySelector(".header")
 
         let back = document.querySelector(".big_box1")
         let a = 1;
@@ -341,6 +361,8 @@
         const 체감온도 = document.querySelector(".체감온도");
         const 풍속 = document.querySelector(".풍속");
         const 습도 = document.querySelector(".습도");
+        const 최고 = document.querySelector(".최고");
+        const 최저 = document.querySelector(".최저");
         const 나라1 = document.querySelector(".나라1");
         const 기압 = document.querySelector(".기압");
         const 위도 = document.querySelector(".위도");
@@ -366,6 +388,7 @@
                 sl6.style.left = "10%";
                 sl7.style.left = "50%";
                 나라.textContent = "Dubai";
+                header.innerHTML="<h2 style='color: white'> 두바이는 아랍에미리트를 구성하는 도시이자 토후국으로, 현대적인 건축물과 럭셔리한 분위기로 유명합니다.</h2>"
                 나라1.textContent = "Dubai";
                 back.style.backgroundImage="url('https://as1.ftcdn.net/jpg/01/18/83/96/1000_F_118839618_CXhlQfjgZE18EdvHG6dmPwnADgFaFB8I.jpg')"
                 axios
@@ -373,7 +396,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -410,6 +436,7 @@
                 sl5.style.left = "10%";
                 sl6.style.left = "50%";
                 나라.textContent = "Rome";
+                header.innerHTML="<h2 style='color: white'> 로마는 이탈리아의 수도이자 역사 유적과 문화 유산이 풍부한 도시입니다. </h2>"
                 나라1.textContent = "Rome";
                 back.style.backgroundImage="url('https://darkrome.com/media/20502/rome-colosseum-city-tour-of-rome.jpg')"
                 axios
@@ -417,7 +444,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=rome&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -442,7 +472,7 @@
                 sl3.style.opacity = "1";
                 sl2.style.transition = "0s all";
                 sl2.style.opacity = "0";
-                cont5.style.left = "41%";
+                cont5.style.left = "36%";
                 cont5.style.fontSize = "25px";
                 cont6.style.left = "45%";
                 cont6.style.fontSize = "16px";
@@ -454,6 +484,7 @@
                 sl4.style.left = "10%";
                 sl5.style.left = "50%";
                 나라.textContent = "Madrid";
+                header.innerHTML="<h2 style='color: white'>마드리드는 스페인의 수도이자 최대 도시이며, 유럽에서 손꼽히는 예술과 문화 중심지입니다</h2>"
                 나라1.textContent = "Madrid";
                 back.style.backgroundImage="url('https://media.architecturaldigest.com/photos/57ad893acfc37bc171ad8082/master/pass/madrid-travel-guide.jpg')"
                 axios
@@ -461,7 +492,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -498,6 +532,7 @@
                 sl3.style.left = "10%";
                 sl4.style.left = "50%";
                 나라.textContent = "Beijing";
+                header.innerHTML="<h2 style='color: white'>베이징은 중화인민공화국의 수도이자 정치, 문화, 교통의 중심지이며, 3천년의 역사를 가진 고도입니다. </h2>"
                 나라1.textContent = "Beijing";
                 back.style.backgroundImage="url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/e4/10/e4/it-was-an-amazing-experience.jpg?w=500&h=500&s=1')"
                 axios
@@ -505,7 +540,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=beijing&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -542,6 +580,7 @@
                 sl2.style.left = "10%";
                 sl3.style.left = "50%";
                 나라.textContent = "London";
+                header.innerHTML="<h2 style='color: white'>런던은 영국의 수도이자 대도시이며, 세계적인 금융, 문화, 패션 중심지입니다.</h2>"
                 나라1.textContent = "London";
                 back.style.backgroundImage="url('https://149990825.v2.pressablecdn.com/wp-content/uploads/2023/09/London4.jpg')"
                 axios
@@ -549,7 +588,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=london&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -586,6 +628,7 @@
                 sl1.style.left = "10%";
                 sl2.style.left = "50%";
                 나라.textContent = "Seoul";
+                header.innerHTML="<h2 style='color: white'>서울은 대한민국의 수도이자 최대 도시이며, 2,000년이 넘는 역사를 가진 서울은 분지 지형에 위치해 있습니다. </h2>"
                 나라1.textContent = "Seoul";
                 back.style.backgroundImage="url('https://i0.wp.com/touristjourney.com/wp-content/uploads/2025/01/Golden-Sunset-Over-Seoul-Urban-Nightscape-Seoul-Korea-scaled.jpg?fit=2560%2C1707&ssl=1')"
                 axios
@@ -593,7 +636,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -630,6 +676,7 @@
                 sl7.style.left = "10%";
                 sl1.style.left = "50%";
                 나라.textContent = "Tokyo";
+                header.innerHTML="<h2 style='color: white'>도쿄는 일본의 수도이자 최대 도시로, 정치, 경제, 문화의 중심지이며 세계적인 대도시입니다.</h2>"
                 나라1.textContent = "Tokyo";
                 back.style.backgroundImage="url('https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg')"
                 axios
@@ -637,7 +684,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -677,6 +727,7 @@
                 sl1.style.left = "10%";
                 sl2.style.left = "50%";
                 나라.textContent = "Seoul";
+                header.innerHTML="<h2 style='color: white'>서울은 대한민국의 수도이자 최대 도시이며, 2,000년이 넘는 역사를 가진 서울은 분지 지형에 위치해 있습니다. </h2>"
                 나라1.textContent = "Seoul";
                 back.style.backgroundImage="url('https://i0.wp.com/touristjourney.com/wp-content/uploads/2025/01/Golden-Sunset-Over-Seoul-Urban-Nightscape-Seoul-Korea-scaled.jpg?fit=2560%2C1707&ssl=1')"
                 axios
@@ -684,7 +735,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -721,6 +775,7 @@
                 sl2.style.left = "10%";
                 sl3.style.left = "50%";
                 나라.textContent = "London";
+                header.innerHTML="<h2 style='color: white'>런던은 영국의 수도이자 대도시이며, 세계적인 금융, 문화, 패션 중심지입니다.</h2>"
                 나라1.textContent = "London";
                 back.style.backgroundImage="url('https://149990825.v2.pressablecdn.com/wp-content/uploads/2023/09/London4.jpg')"
                 axios
@@ -728,7 +783,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=london&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -765,6 +823,7 @@
                 sl3.style.left = "10%";
                 sl4.style.left = "50%";
                 나라.textContent = "Beijing";
+                header.innerHTML="<h2 style='color: white'>베이징은 중화인민공화국의 수도이자 정치, 문화, 교통의 중심지이며, 3천년의 역사를 가진 고도입니다. </h2>"
                 나라1.textContent = "Beijing";
                 back.style.backgroundImage="url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/e4/10/e4/it-was-an-amazing-experience.jpg?w=500&h=500&s=1')"
                 axios
@@ -773,7 +832,10 @@
                     )
                     .then(function (response) { 
                         console.log(response);
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -798,7 +860,7 @@
                 sl7.style.opacity = "1";
                 sl1.style.transition = "0s all";
                 sl1.style.opacity = "0";
-                cont5.style.left = "41%";
+                cont5.style.left = "38%";
                 cont5.style.fontSize = "25px";
                 cont4.style.left = "45%";
                 cont4.style.fontSize = "16px";
@@ -810,6 +872,7 @@
                 sl4.style.left = "10%";
                 sl5.style.left = "50%";
                 나라.textContent = "Madrid";
+                header.innerHTML="<h2 style='color: white'>마드리드는 스페인의 수도이자 최대 도시이며, 유럽에서 손꼽히는 예술과 문화 중심지입니다</h2>"
                 나라1.textContent = "Madrid";
                 back.style.backgroundImage="url('https://media.architecturaldigest.com/photos/57ad893acfc37bc171ad8082/master/pass/madrid-travel-guide.jpg')"
                 axios
@@ -817,7 +880,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -854,6 +920,7 @@
                 sl5.style.left = "10%";
                 sl6.style.left = "50%";
                 나라.textContent = "Rome";
+                header.innerHTML="<h2 style='color: white'> 로마는 이탈리아의 수도이자 역사 유적과 문화 유산이 풍부한 도시입니다. </h2>"
                 나라1.textContent = "Rome";
                 back.style.backgroundImage="url('https://darkrome.com/media/20502/rome-colosseum-city-tour-of-rome.jpg')"
                 axios
@@ -861,7 +928,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=rome&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -898,6 +968,7 @@
                 sl6.style.left = "10%";
                 sl7.style.left = "50%";
                 나라.textContent = "Dubai";
+                header.innerHTML="<h2 style='color: white'> 두바이는 아랍에미리트를 구성하는 도시이자 토후국으로, 현대적인 건축물과 럭셔리한 분위기로 유명합니다.</h2>"
                 나라1.textContent = "Dubai";
                 back.style.backgroundImage="url('https://as1.ftcdn.net/jpg/01/18/83/96/1000_F_118839618_CXhlQfjgZE18EdvHG6dmPwnADgFaFB8I.jpg')"
                 axios
@@ -905,7 +976,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
@@ -942,6 +1016,7 @@
                 sl7.style.left = "10%";
                 sl1.style.left = "50%";
                 나라.textContent = "Tokyo";
+                header.innerHTML="<h2 style='color: white'>도쿄는 일본의 수도이자 최대 도시로, 정치, 경제, 문화의 중심지이며 세계적인 대도시입니다.</h2>"
                 나라1.textContent = "Tokyo";
                 back.style.backgroundImage="url('https://www.gotokyo.org/kr/plan/tokyo-outline/images/main.jpg')"
                 axios
@@ -949,7 +1024,10 @@
                     "https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=013debb1fece8d02eb487db2cb357845"
                     )
                     .then(function (response) { 
+                        console.log(response);
                         기온.textContent = `${(response.data.main.temp - 273.15).toFixed(2)}°C`;
+                        최고.textContent = `${(response.data.main.temp_max - 273.15).toFixed(2)}°C`;
+                        최저.textContent = `${(response.data.main.temp_min - 273.15).toFixed(2)}°C`;
                         체감온도.textContent = `feel ${(response.data.main.feels_like - 273.15).toFixed(2)}°C`;
                         풍속.textContent = `${response.data.wind.speed}m/s`;
                         습도.textContent = `${response.data.main.humidity}%`;
