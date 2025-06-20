@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .ch {
+            font-size: 100px;
+        }
+        button {
+            width: 50px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    시간설정<input type="text" class="시간" />초
+    <button class="시작">시작</button>
+    <button class="정지">정지</button>
+    <h2>남은 시간</h2>
+    <span class="ch">0</span><span>s</span>
+    <script>
+        let ch = document.querySelector(".ch");
+        let 시작 = document.querySelector(".시작");
+        let 정지 = document.querySelector(".정지");
+        let 시간 = document.querySelector(".시간");
+        let 셋
+        function timer() {
+            let 벨류 = 시간.value
+            clearTimeout(셋)
+            셋 = setInterval(function () {
+                if (벨류<1){
+                    clearTimeout(셋)
+                }
+                ch.textContent = `${벨류}`;
+                벨류 -= 1;
+                }, 1000); 
+            }
+        시작.addEventListener("click", timer);
+        정지.addEventListener("click",function(){
+            clearTimeout(셋)
+        })
+    </script>
+</body>
+
+</html>
