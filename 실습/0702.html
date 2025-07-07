@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 30px;
+            border-bottom: 1px solid black;
+        }
+
+        header > h1 {
+            font-size: 30pt;
+        }
+
+        .shadow {
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .time {
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+
+        button {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="shadow">D-Day Timer</h1>
+    </header>
+
+    <br>
+
+    <section>
+        <p>입력되는 날짜는 오늘 이후여야 함</p>
+        <br>
+        <p>프로그램 상으로 입력할 날짜 입력 양식은 ISO를 따름</p>
+        <p>날짜가 2024-01-01 이더라도 입력할 때는 2024-01-01T00:00:00 양식</p>
+        <br>
+        <p>tip : 일 → 시간 → 분 → 초 순으로 구하기</p>
+        <br>
+        <label for="">
+            <input type="date" class="date">
+            <button>시작</button>
+        </label>
+        <div class="time">
+            <p class="timer"></p>
+        </div>
+    </section>
+
+
+
+    <script>
+        let btn = document.querySelector("button")
+        let timer = document.querySelector(".timer")
+        let date = document.querySelector(".date")
+        let Interval
+        let Dday
+
+        btn.addEventListener("click", () => {
+            const str = date.value
+            arr = str.split("-")
+            Dday = new Date()
+            Dday.setFullYear(arr[0])
+            Dday.setMonth(arr[1]-1)
+            Dday.setDate(arr[2])
+            Dday.setHours(0)
+            Dday.setMinutes(0)
+            Dday.setSeconds(0)
+            Dday.setMilliseconds(0)
+            const now = new Date()
+            if (Dday <= now) {
+                alert("유효하지 않은 날짜입니다.")
+                return
+            }
+            clearInterval(Interval)
+            Interval = setInterval(time, 1000)
+        })
+
+        function time () {
+            const now = new Date()
+            const diff = Dday - now
+            if (diff <= 0) {
+                clearInterval(Interval)
+                timer.textContent = `D-day`
+                return
+            }
+            const dt = Math.floor(diff / (1000 * 60 * 60 * 24))
+            const hour = Math.floor((diff / (1000 * 60 * 60)) % 24)
+            const min = Math.floor((diff / (1000 * 60)) % 60)
+            const sec = Math.floor((diff / 1000) % 60)
+            timer.textContent = `${dt}일 ${hour}시간 ${min}분 ${sec}초`
+        }
+    </script>
+</body>
+</html>
