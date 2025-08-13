@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Shopping Cart</h1>
+
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="box">
+            <h2>충만치킨</h2>
+            <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2019/10/15/z0nBPnrzp5GIJLHq6-wZMs8fBHDHoNZiXcVvXsuIpjeWvnuwUYmPbl2RJ7ODPCon.jpg"
+                alt="">
+            <h4>Price : 21000 -> 18900</h4>
+            <h4>할인 10%</h4>
+            <span>수량 : </span><input class="num" type="number" ; value="1" data-price="21000"; data-discount="0.9">
+        </div>
+
+        <div class="box">
+            <h2>쌀통닭</h2>
+            <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDAyMjRfNTUg%2FMDAxNzA4NzY2NDEyNTc1.CDFwp1dM9175PFxOvKyAF8cjIDDQEn7SBHWW5uVXUu4g.nVZ8MhS7Pm817qAPEDpg-to4JlK3eM7EtefeTIfzghMg.JPEG%2F20240218_154041.jpg.jpg%3Ftype%3Dw1500_60_sharpen"
+                alt="">
+            <h4>Price : 17000 → 13600</h4>
+            <h4>할인 20%</h4>
+            <span>수량 : </span> <input class="num" type="number" ; value="1" data-price="17000" data-discount="0.8">
+        </div>
+
+
+        <div class="box">
+            <h2>옥야식당 국밥</h2>
+            <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MDNfMjE2%2FMDAxNzIyNjg1OTE2OTU0.0oI-ELdjmbUe1L1fctji59ceBVjpxVK65VMyzfBCUKIg.mchw3ghUlcwtwvJVMBl3marxpowiXYcjH00OidfnX2Ig.JPEG%2F996DC2EF-3E97-4396-9E74-600B7F4DBF5C.jpeg%3Ftype%3Dw1500_60_sharpen"
+                alt="">
+            <h4>Price : 10000 → 8000</h4>
+            <h4>할인 20%</h4>
+            <span>수량 : </span><input class="num" type="number" ; value="1" data-price="10000" data-discount="0.8">
+        </div>
+
+
+        <div class="box">
+            <h2>청하감자탕</h2>
+            <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211129_277%2F1638169897809ENjmM_JPEG%2F78600D72-E13C-422D-95C2-8D35AD28F78A.jpeg"
+                alt="">
+            <h4>Price : 8000 → 4000</h4>
+            <h4>할인 50%</h4>
+            <span>수량 : </span><input class="num" type="number" ; value="1" data-price="8000" data-discount="0.5">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+
+    <br>
+    <br>
+    <h1 class="total">Total : ?</h1>
+    <script>
+        함수()
+        function 함수() {
+            let num = document.querySelectorAll(".num")
+            let boxes = document.querySelectorAll(".box")
+            let tot = 0
+            boxes.forEach(box=> {
+                const pri = box.querySelector(".num").dataset.price
+                console.log(pri)
+                const dis = box.querySelector(".num").dataset.discount
+                const quantity = box.querySelector(".num").value 
+                tot += pri * quantity * dis;
+            })
+            document.querySelector(".total").textContent=tot
+        }
+        document.querySelectorAll(".num").forEach(input => {
+            input.addEventListener('input',함수)
+        })
+    </script>
+</body>
+</html>
