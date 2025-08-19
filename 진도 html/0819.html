@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <style>
+        #box {
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="box" class="m-1 w-25 h-25">박스1</div>
+        <div id="box" class="m-2 w-50 h-50">박스2</div>
+        <div id="box" class="m-3 w-75 h-75">박스3</div>
+        <div id="box" class="m-4 w-100 h-100">박스3</div>
+
+
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adad">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="adad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        addaad
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dada">
+            Launch demo modal
+        </button>
+
+        <div class="modal fade" id="dada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        dada
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Item 1</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Item 2</a>
+                        <a class="nav-link" href="#item-3">Item 3</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+
+            <div class="col-8">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+                    <div id="item-1">
+                        <h4>Item 1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam adipisci sit, nostrum earum expedita quia vitae doloribus fuga dolore. Voluptate, ullam natus modi ab magni expedita iure omnis reprehenderit tempora!</p>
+                    </div>
+                    <div id="item-1-1">
+                        <h5>Item 1-1</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ipsum! Praesentium assumenda quam optio dolores corporis officia culpa reprehenderit modi quia nam iusto dolor, itaque neque, accusamus in. Provident corrupti illum accusantium odit harum nisi hic repudiandae quasi sint pariatur. Minus assumenda eveniet perferendis alias accusantium eaque, doloribus numquam? Nisi eius maiores perferendis quod assumenda doloremque corrupti eaque laudantium aliquid nulla omnis soluta saepe, cumque impedit eveniet recusandae laboriosam consequatur voluptas asperiores animi. Beatae natus et commodi maxime dolore ad tenetur rerum aut at libero. Amet quidem architecto vel accusamus nesciunt repellendus, quo minus officiis facere consectetur repellat quam hic!</p>
+                    </div>
+                    <div id="item-1-2">
+                        <h5>Item 1-2</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique autem corrupti aliquid veniam, soluta sed, temporibus, alias nesciunt laboriosam inventore tempore voluptatem voluptatibus reiciendis necessitatibus quo quos omnis harum. Laborum voluptates facilis deleniti necessitatibus neque dolores placeat, eligendi autem repudiandae inventore cum fuga assumenda ea, in quidem quae culpa eum.</p>
+                    </div>
+                    <div id="item-2">
+                        <h4>Item 2</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur veritatis ex sapiente voluptates. Explicabo sunt quidem possimus excepturi magnam delectus earum, similique eaque ipsam ea aliquid quis nesciunt incidunt aperiam architecto perspiciatis voluptas eligendi quasi facilis adipisci id culpa nihil illo. Voluptate, neque earum. Incidunt amet optio voluptate laborum, provident animi vitae. Eveniet corrupti iure harum alias perspiciatis magni impedit eum saepe quisquam ex maiores quas, iusto facilis illo odit nisi obcaecati ipsam sequi libero officiis soluta? Nihil expedita voluptates laborum blanditiis ipsa officia porro, quo nesciunt nemo, ipsam excepturi. Neque ratione aliquam voluptate quia quam velit aperiam, nobis odio!</p>
+                    </div>
+                    <div id="item-3">
+                        <h4>Item 3</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea error nobis aliquid hic rem. Mollitia natus dolore recusandae vitae adipisci expedita, a ea quisquam sunt possimus aliquam, nihil nobis beatae soluta facilis autem iusto reprehenderit eveniet dolorum molestiae dolor incidunt minima enim. Excepturi commodi explicabo culpa reiciendis nobis ducimus libero, accusamus illo quis, inventore maxime doloremque fuga perferendis, voluptatem sed rerum harum repudiandae velit. Veritatis laboriosam, animi, id assumenda quibusdam eligendi eius deleniti facere esse, dicta alias magni quae rem dolor natus reiciendis corrupti velit. Itaque ipsum doloremque consectetur modi, debitis sit magnam eum cumque aliquid explicabo voluptatum, quisquam porro.</p>
+                    </div>
+                    <div id="item-3-1">
+                        <h5>Item 3-1</h5>
+                        <p>...</p>
+                    </div>
+                    <div id="item-3-2">
+                        <h5>Item 3-2</h5>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor sapiente eaque est ducimus adipisci provident, illo omnis rem consequatur magni nostrum fuga quo necessitatibus cum similique maiores amet tenetur, totam repudiandae distinctio? Quam, reiciendis cumque in suscipit inventore rerum nihil repellendus nam minus nesciunt, totam laborum at impedit soluta ad! Commodi eum ipsam doloribus cum eius voluptatum ratione soluta deserunt nostrum, voluptatibus minima sed, nisi pariatur tenetur praesentium illum. Accusamus possimus natus minima soluta in quidem quo aliquam alias, magnam omnis voluptatum dolor modi perferendis reprehenderit optio blanditiis distinctio ipsa ratione hic tempora molestiae amet repellendus vitae ab! Nihil, nemo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
