@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: #333333;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        .container{
+            width: 100%;
+        }
+        .header{
+            display: flex;
+            width: 1200px;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: tomato;
+        }
+        .menu > li {
+            width: 150px;
+            height: 50px;
+            background-color: steelblue;
+            text-align: center;
+            line-height: 50px;
+        }
+        .menu li a {
+            text-decoration: none;
+        }
+        .menu li {
+            list-style: none;
+        }
+        .sub_menu > li{
+            background-color: steelblue;
+        }
+        div li:hover {
+            background-color: chartreuse;
+        }
+
+        .top1 {
+            background-color: turquoise;
+            width: 200px;
+            height: 100px;
+            border-right: 3px dotted black;
+        }
+        .top2 {
+            width: 1000px;
+            background-color: skyblue;
+        }
+        .slide_container {
+            width: 1200px;
+            height: 300px;
+            background-color: darkgoldenrod;
+        }
+        .contents {
+            display: flex;
+        }
+        .contents > div {
+            width: 400px;
+            height: 300px;
+            background-color: slateblue;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu > li {
+            width: 150px;
+            height: 50px;
+            background-color: steelblue;
+            text-align: center;
+            line-height: 50px;
+        }
+        .footer {
+            width: 1200px;
+            height: 100px;
+            background-color: aliceblue;
+            display: flex;
+        }
+        .logo2 {
+            width: 200px;
+            background-color: silver;
+        }
+        .copy {
+            width: 800px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        .sns {
+            width: 200px;
+            height: 100px;
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top1">로고</div>
+            <ul class="menu">
+                <li><a href="#">탑</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">블라우스</a></li>
+                        <li><a href="#">아우터</a></li>
+                        <li><a href="#">팬츠</a></li>
+                        <li><a href="#">악세서리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아우터</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">자켓</a></li>
+                        <li><a href="#">코트</a></li>
+                        <li><a href="#">거다건</a></li>
+                        <li><a href="#">머플러</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">팬츠</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">청바지</a></li>
+                        <li><a href="#">짧은바지</a></li>
+                        <li><a href="#">긴바지</a></li>
+                        <li><a href="#">레깅스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">악세서리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">귀고리</a></li>
+                        <li><a href="#">목걸이</a></li>
+                        <li><a href="#">반지</a></li>
+                        <li><a href="#">팔찌</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="slide_container">이미지 슬라이드</div>
+        <div class="contents"><div class="con1">공지사항</div><div class="con2">배너</div><div class="con3">바로가기</div></div>
+        <div class="footer"><div class="logo2">로고</div><div class="copy">Copyright</div><div class="sns">SNS</div></div>
+    </div>
+</body>
+</html>
