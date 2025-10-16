@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {color: #333333; box-sizing: border-box; margin: 0; padding: 0;}
+        li {list-style-type: none;}
+        a {text-decoration: none;}
+
+        .wrap { width: 1200px; margin: 0 auto;}
+
+        header {display: flex; }
+        .logo1 {width: 200px; height: 100px; background-color: tomato;}
+        .nav {width: 1000px; height: 100px; background-color: aquamarine;}
+        .menu { display: flex; justify-content: end; margin: 25px;}
+        .menu > li {width: 150px; height: 50px; background-color: silver; text-align: center; line-height: 50px;}
+        .sub > li {background-color: azure;}
+
+        li:hover {background-color: aquamarine;}
+        .slide {width: 1200px; height: 300px; background-color: steelblue;}
+
+        .contents {width: 1200px; height: 200px; display: flex;}
+        .con1 {width: 400px; height: 200px; background-color: wheat;}
+        .tab-container {display: flex;}
+        .tab-container > div {width: 100px; height: 50px;  text-align: center;}
+        .active {background-color: hotpink;}
+        .tab-con1 {background-color: hotpink; height: 200px; padding: 15px;}
+        
+        .tab-con2 {background-color: hotpink; height: 200px; padding: 15px; text-align: center;}
+
+        .gallery {text-align: center ;width: 100px;height: 50px;background-color: hotpink;}
+        .con2 {width: 400px; height: 200px; background-color: rgb(255, 211, 130);}
+        .con3 {width: 400px; height: 200px; background-color: rgb(255, 193, 78);}
+
+        footer {display: flex;}
+        .fam {width: 200px; height: 100px; background-color: skyblue;}
+        .menu2 {width: 1000px; height: 50px; background-color: rgb(223, 243, 246);}
+        .copy {width: 1000px; height: 50px; background-color: chocolate;}
+
+        .sli1 {width: 1200px;height: 150px;background-color: beige;}
+        .sli2 {width: 1200px;height: 150px;background-color: darkgoldenrod;}
+
+        .tab-con2 img {margin: 10px;}
+
+
+        .popup {width: 700px;height: 500px;border: 3px solid #333; position: absolute; left: 50%; top: 100px; background-color: #FFFFFF; margin-left: -350px; padding: 30px; display: none;}
+        .popup button {right: 20px; bottom: 20px; position: absolute;}
+        .popup h1 {border-bottom: 2px solid #000;}
+    </style> 
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo1">로고</div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="#">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직구성도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업영역</a>
+                        <ul class="sub">
+                            <li><a href="#">전원주택</a></li>
+                            <li><a href="#">도시재생</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">입주정보</a>
+                        <ul class="sub">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">건축상담</a></li>
+                            <li><a href="#">홍보자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="slide">
+            <div class="sli1"></div>
+            <div class="sli2"></div>
+        </section>
+
+        <section class="contents">
+            <div class="con1">
+                <div class="tab-container">
+                    <div class="active notice">공지사항</div>
+                </div>
+                <div class="tab-con1">
+                    <p class="park">1.티모사랑</p>
+                    <p>2.요들사랑</p>
+                    <p>3.룰루사랑</p>
+                    <p>4.유미사랑</p>
+                </div>
+            </div>
+            
+            <div class="con2">
+                <div class="gallery">갤러리</div>
+                <div class="tab-con2">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                </div>
+
+            </div>
+            <div class="con3">바로가기</div>
+        </section>
+
+        <footer>
+            <div>
+                <div class="menu2">하단메뉴</div>
+                <div class="copy">카피</div>
+            </div>
+            <div class="fam">패밀리사이트</div>
+        </footer>
+    </div>
+
+
+    <div class="popup">
+        <h1>타이틀</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis at, temporibus odit sed tempore accusamus totam sunt nesciunt excepturi quibusdam, odio facere eum. Vel corporis ipsa sequi officia vitae nam doloribus id, fugiat ipsam? Cum mollitia ex adipisci! Iure, earum?</p>
+        <button>X 닫기</button>
+    </div>
+    <script>
+        const 박 = document.querySelector(".park")
+        const 팝업 = document.querySelector(".popup")
+        const 버튼 = document.querySelector(".popup button")
+
+        박.addEventListener("click", function(){
+            팝업.style.display = "block"
+        })
+        버튼.addEventListener("click", function(){
+            팝업.style.display = "none"
+        })
+    </script>
+</body>
+</html>
