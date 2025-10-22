@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0; box-sizing: border-box; color: #333333;}
+        li {list-style-type: none;}
+        a {text-decoration: none;}
+
+        .wrap {width: 1200px; margin: 0 auto;}
+        header {display: flex;}
+        .logo {background-color: aliceblue; width: 200px; height: 100px;}
+        .nav {background-color: antiquewhite; width: 1000px; height: 100px;}
+        .menu {display: flex; justify-content: end; margin: 25px;}
+        .menu > li {width: 150px; height: 50px; background-color: blueviolet; text-align: center; line-height: 50px;}
+        .sub > li {background-color: azure;}
+
+
+        .sec1 {width: 1200px; height: 300px;}
+        .sli1 {width: 1200px; height: 150px; background-color: #333333;}
+        .sli2 {width: 1200px; height: 150px; background-color: aqua;}
+        .sec2 {display: flex;width: 1200px; height: 200px;}
+        .gong {width: 400px;height: 200px; background-color: aquamarine;}
+        .gel {width: 400px; height: 200px; background-color: azure;}
+        .bar {width: 400px; height: 200px; background-color: beige;}
+
+
+
+        footer {display: flex; width: 1200px; height: 100px;}
+        .copy {width: 1000px; height: 100px; background-color: bisque;}
+        .foot { width: 200px; height: 100px;}
+        .sns {width: 200px; height: 50px;background-color: blanchedalmond;}
+        .fam {width: 200px;height: 50px;background-color: blue;}
+
+        .con1 {width: 400px; height: 200px; background-color: wheat;}
+        .tab-container {display: flex;}
+        .tab-container > div {width: 100px; height: 50px;  text-align: center;}
+        .active {background-color: hotpink;}
+        .tab-con1 {background-color: hotpink; height: 200px; padding: 15px;}
+        
+        .tab-con2 {background-color: hotpink; height: 200px; padding: 15px; text-align: center;}
+
+        .gallery {text-align: center ;width: 100px;height: 50px;background-color: hotpink;}
+        .con2 {width: 400px; height: 200px; background-color: rgb(255, 211, 130);}
+        .con3 {width: 400px; height: 200px; background-color: rgb(255, 193, 78);}
+
+        .popup { z-index: 1;;width: 700px;height: 500px;border: 3px solid #333; position: absolute; left: 50%; top: 100px; background-color: #FFFFFF; margin-left: -350px; padding: 30px; display: none;}
+        .popup button {right: 20px; bottom: 20px; position: absolute;}
+        .popup h1 {border-bottom: 2px solid #000;}
+
+        .bg {background-color:  #00000031; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;}
+
+        .sub > li {
+            display: none;
+        }
+        .menu:hover {
+            .sub > li {
+                display: block;
+            }
+        }
+        li:hover{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"></div>
+            <div class="nav">
+                    <ul class="menu">
+                        <li><a href="">해외여행</a>
+                            <ul class="sub">
+                                <li><a href="">동남아/대만</a></li>
+                                <li><a href="">중국/홍콩</a></li>
+                                <li><a href="">유럽/두바이</a></li>
+                                <li><a href="">미주/하와이</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">국내여행</a>
+                            <ul class="sub">
+                                <li><a href="">서울/경계권</a></li>
+                                <li><a href="">충청권</a></li>
+                                <li><a href="">전라권</a></li>
+                                <li><a href="">경상/강원권</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">제주도</a>
+                            <ul class="sub">
+                                <li><a href="">버스여행</a></li>
+                                <li><a href="">자유여행</a></li>
+                                <li><a href="">호텔/펜션</a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">렌터카</a>
+                            <ul class="sub">
+                                <li><a href="">국내 랜터카</a></li>
+                                <li><a href="">국외 렌터카</a></li>
+                                <li><a href=""></a>자료실</li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+            </div>
+        </header>
+        
+        <section class="sec1">
+            <div class="sli1"></div>
+            <div class="sli2"></div>
+        </section>
+        <section class="sec2">
+            <div class="con1">
+                <div class="tab-container">
+                    <div class="active notice">공지사항</div>
+                </div>
+                <div class="tab-con1">
+                    <p class="park">1.티모사랑</p>
+                    <p>2.요들사랑</p>
+                    <p>3.룰루사랑</p>
+                    <p>4.유미사랑</p>
+                </div>
+            </div>
+            
+            <div class="con2">
+                <div class="gallery">갤러리</div>
+                <div class="tab-con2">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                </div>
+
+            </div>
+            <div class="con3">바로가기</div>
+        </section>
+
+        <footer>
+            <div class="copy"></div>
+            <div class="foot">
+                <div class="sns"></div>
+                <div class="fam"></div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="popup">
+        <h1>타이틀</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis at, temporibus odit sed tempore accusamus totam sunt nesciunt excepturi quibusdam, odio facere eum. Vel corporis ipsa sequi officia vitae nam doloribus id, fugiat ipsam? Cum mollitia ex adipisci! Iure, earum?</p>
+        <button>X 닫기</button>
+    </div>
+    
+    <div class="bg"></div>
+    <script>
+        const 박 = document.querySelector(".park")
+        const 팝업 = document.querySelector(".popup")
+        const 버튼 = document.querySelector(".popup button")
+        const 배경 = document.querySelector(".bg")
+
+        박.addEventListener("click", function(){
+            팝업.style.display = "block"
+            배경.style.display = "block"
+        })
+        버튼.addEventListener("click", function(){
+            팝업.style.display = "none"
+            배경.style.display = "none"
+        })
+    </script>
+</body>
+</html>
