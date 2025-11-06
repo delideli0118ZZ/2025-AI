@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;box-sizing: border-box; color: #333333;}
+        a{text-decoration: none;}
+        li{list-style: none;}
+        .wrap {width: 1000px; height: 650px; margin: 0 auto; display: flex;}
+        .logo{width: 220px; height: 100px; background-color: aliceblue;}
+        .nav{width: 220px; height: 550px; background-color: antiquewhite;}
+
+        .B{width: 780px; height: 650px;}
+        .slide{width: 780px; height: 350px; background-color: aqua;}
+        .C{width: 780px;height: 200px; display: flex;}
+        .gel{width: 260px; height: 200px; background-color: azure;}
+        .ban{width: 260px; height: 200px; background-color: beige;}
+        .baro{width: 260px; height: 200px; background-color: bisque;}
+        .D{display: flex; width: 780px; height: 100px;}
+        .foot {width: 560px;height: 100px;}
+        .footer {width: 560px;height: 50px; background-color: blanchedalmond;}
+        .copy{width: 560px;height: 50px; background-color: blueviolet;}
+
+        .menu{width: 190px;height: 50px; padding: 15px;}
+        .menu li{width: 190px;height: 30px; text-align: center; background-color: burlywood;}
+        .menu >li{margin-bottom:82px;}
+
+        .tab-con{display: flex;}
+        .tab2 {display: none;}
+        .gong{background-color: bisque; width: 100px; height: 30px;text-align: center;}
+        .gallery{background-color: rgb(244, 255, 196); width: 100px; height: 30px;text-align: center;}
+
+        .popup { z-index: 1;;width: 700px;height: 500px;border: 3px solid #333; position: absolute; left: 50%; top: 100px; background-color: #FFFFFF; margin-left: -350px; padding: 30px; display: none;}
+        .popup button {right: 20px; bottom: 20px; position: absolute;}
+        .popup h1 {border-bottom: 2px solid #000;}
+
+        .bg {background-color:  #00000031; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="A">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul class="menu">
+                    <li><a href="">이용안내</a>
+                        <ul class="sub su1">
+                            <li><a href="">이용방법1</a></li>
+                            <li><a href="">이용시간2</a></li>
+                            <li><a href="">이용요금3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">이용안내</a>
+                        <ul class="sub su2">
+                            <li><a href="">이용방법4</a></li>
+                            <li><a href="">이용시간5</a></li>
+                            <li><a href="">이용요금6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">이용안내</a>
+                        <ul class="sub su3">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용시간</a></li>
+                            <li><a href="">이용요금</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">이용안내</a>
+                        <ul class="sub su4">
+                            <li><a href="">이용방법</a></li>
+                            <li><a href="">이용시간</a></li>
+                            <li><a href="">이용요금</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="B">
+            <div class="slide"></div>
+            <div class="C">
+                <div class="gel">
+                    <div class="tab-con">
+                        <div class="gong">공지사항</div>
+                        <div class="gallery">갤러리</div>
+                    </div>
+                    <div class="tab1">
+                        <p class="zani">1.젠니</p>
+                        <p>2.칸타렐라</p>
+                        <p>3.카르티시아</p>
+                        <p>4.장리</p>
+                    </div>
+                    <div class="tab2">
+                        <img width="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    <img width="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="ban"></div>
+                <div class="baro"></div>
+            </div>
+            <div class="D">
+                <div class="logo"></div>
+                <div class="foot">
+                    <div class="footer"></div>
+                    <div class="copy"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popup">
+        <h1>타이틀</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis at, temporibus odit sed tempore accusamus totam sunt nesciunt excepturi quibusdam, odio facere eum. Vel corporis ipsa sequi officia vitae nam doloribus id, fugiat ipsam? Cum mollitia ex adipisci! Iure, earum?</p>
+        <button>X 닫기</button>
+    </div>
+    
+    <div class="bg"></div>
+
+    <script>
+        const 공지사항 = document.querySelector(".gong")
+        const 갤러리 = document.querySelector(".gallery")
+        const tab1 = document.querySelector(".tab1")
+        const tab2 = document.querySelector(".tab2")
+        const zani = document.querySelector(".zani")
+        const 팝업 = document.querySelector(".popup")
+        const 배경 = document.querySelector(".bg")
+        
+        const 버튼 = document.querySelector(".popup button")
+
+        zani.addEventListener("click", function(){
+            팝업.style.display = "block"
+            배경.style.display = "block"
+        })
+        버튼.addEventListener("click", function(){
+            팝업.style.display = "none"
+            배경.style.display = "none"
+        })
+
+        공지사항.addEventListener("click",function(){
+            tab1.style.display="block"
+            tab2.style.display="none"
+        })
+        갤러리.addEventListener("click",function(){
+            tab1.style.display="none"
+            tab2.style.display="block"
+        })
+
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script>
+
+        const 메뉴 = $(".menu li")
+
+        메뉴.mouseover(function(){
+            $(this).children("ul").stop().slideDown()
+        })
+
+        메뉴.mouseout(function(){
+            $(this).children("ul").stop().slideUp()
+        })
+    </script>
+</body>
+</html>
