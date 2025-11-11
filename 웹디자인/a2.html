@@ -14,13 +14,9 @@
         .logo {background-color: aliceblue; width: 200px; height: 100px;}
         .nav {background-color: antiquewhite; width: 1000px; height: 100px;}
         .menu {display: flex; justify-content: end; margin: 25px;}
-        .menu > li {width: 150px; height: 50px; background-color: blueviolet; text-align: center; line-height: 50px;}
+        .menu > li {width: 150px; height: 50px; background-color: blueviolet; text-align: center; line-height: 50px; z-index: 1;}
         .sub > li {background-color: azure;}
 
-
-        .sec1 {width: 1200px; height: 300px;}
-        .sli1 {width: 1200px; height: 150px; background-color: #333333;}
-        .sli2 {width: 1200px; height: 150px; background-color: aqua;}
         .sec2 {display: flex;width: 1200px; height: 200px;}
         .gong {width: 400px;height: 200px; background-color: aquamarine;}
         .gel {width: 400px; height: 200px; background-color: azure;}
@@ -62,6 +58,9 @@
         li:hover{
             background-color: coral;
         }
+
+        .slide-con{overflow: hidden; width: 1200px;height: 300px;}
+        .slide-cover {display: flex; position: relative;}
     </style>
 </head>
 <body>
@@ -107,9 +106,12 @@
             </div>
         </header>
         
-        <section class="sec1">
-            <div class="sli1"></div>
-            <div class="sli2"></div>
+        <section class="slide-con">
+            <div class="slide-cover">
+                <div class="slide"><img src="https://media.discordapp.net/attachments/1341586538324168736/1422109626547179600/img1.jpg?ex=6913820c&is=6912308c&hm=df71524442793de0388a9a9f40513ebb7293b0d052d4304235dd1f0cc7a94016&=&format=webp&width=1800&height=450" alt=""></div>
+                <div class="slide"><img src="https://media.discordapp.net/attachments/1341586538324168736/1422109626798833714/img2.jpg?ex=6913820c&is=6912308c&hm=faf41aaa8c2b185a613ebee89a3b698d984b1fa34218d2e840cc9deaeb9318f5&=&format=webp&width=1800&height=450" alt=""></div>
+                <div class="slide"><img src="https://media.discordapp.net/attachments/1341586538324168736/1422109627159678996/img3.jpg?ex=6913820c&is=6912308c&hm=deb3bef79c52b03a094741199fb6296e10963af7f94b863f1d488f33ec027b6c&=&format=webp&width=1800&height=450" alt=""></div>
+            </div>
         </section>
         <section class="sec2">
             <div class="con1">
@@ -164,6 +166,15 @@
             팝업.style.display = "none"
             배경.style.display = "none"
         })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script>
+        setInterval(function(){
+            $(".slide-cover").animate({left: -1200}, 500).delay(1000)
+            $(".slide-cover").animate({left: -2400}, 500).delay(1000)
+            $(".slide-cover").animate({left: 0},500).delay(1000)
+        },0)
     </script>
 </body>
 </html>
