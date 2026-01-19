@@ -13,10 +13,14 @@
         header {display: flex;}
         .logo {background-color: aliceblue; width: 200px; height: 100px;}
         .nav {background-color: antiquewhite; width: 1000px; height: 100px;}
-        .menu {display: flex; justify-content: end; margin: 25px;}
+        .menu {display: flex; justify-content: end; margin: 25px; z-index: 1;}
         .menu > li {width: 150px; height: 50px; background-color: blueviolet; text-align: center; line-height: 50px; z-index: 1;}
         .sub > li {background-color: azure;}
+        li:hover {background-color: orange;}
 
+
+        .sec1 {width: 1200px; height: 300px;}
+        .slide-container {width: 1200px;height: 300px;background-color: antiquewhite;}
         .sec2 {display: flex;width: 1200px; height: 200px;}
         .gong {width: 400px;height: 200px; background-color: aquamarine;}
         .gel {width: 400px; height: 200px; background-color: azure;}
@@ -25,16 +29,18 @@
 
 
         footer {display: flex; width: 1200px; height: 100px;}
-        .copy {width: 200px; height: 100px; background-color: bisque;}
-        .foot { width: 800px; height: 100px; background-color: aqua;}
-        .hoot { width: 200px; height: 100px; background-color: coral;}
+        .copy {width: 800px; height: 100px; background-color: bisque;}
+        .foot { width: 200px; height: 100px;}
+        .sns {width: 200px; height: 100px;background-color: rgb(237, 181, 97);}
+        .fam {width: 200px;height: 50px;background-color: blue;}
 
         .con1 {width: 400px; height: 200px; background-color: wheat;}
         .tab-container {display: flex;}
         .tab-container > div {width: 100px; height: 50px;  text-align: center;}
         .active {background-color: hotpink;}
-        .active:hover {cursor: pointer;}
         .tab-con1 {background-color: hotpink; height: 200px; padding: 15px;}
+
+        .park:hover{cursor: pointer;}
         
         .tab-con2 {background-color: hotpink; height: 200px; padding: 15px; text-align: center;}
 
@@ -48,17 +54,7 @@
 
         .bg {background-color:  #00000031; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;}
 
-        .sub > li {
-            display: none;
-        }
-        .menu:hover {
-            .sub > li {
-                display: block;
-            }
-        }
-        li:hover{
-            background-color: coral;
-        }
+        .sub {display: none;}
 
         .slide-con{overflow: hidden; width: 1200px;height: 300px;}
         .slide-cover {display: flex; position: relative;}
@@ -70,36 +66,36 @@
             <div class="logo"></div>
             <div class="nav">
                     <ul class="menu">
-                        <li><a href="">해외여행</a>
+                        <li><a href="#">해외여행</a>
                             <ul class="sub">
-                                <li><a href="">동남아/대만</a></li>
-                                <li><a href="">중국/홍콩</a></li>
-                                <li><a href="">유럽/두바이</a></li>
-                                <li><a href="">미주/하와이</a></li>
+                                <li><a href="#">동남아/대만</a></li>
+                                <li><a href="#">중국/홍콩</a></li>
+                                <li><a href="#">유럽/두바이</a></li>
+                                <li><a href="#">미주/하와이</a></li>
                             </ul>
                         </li>
-                        <li><a href="">국내여행</a>
+                        <li><a href="#">국내여행</a>
                             <ul class="sub">
-                                <li><a href="">서울/경계권</a></li>
-                                <li><a href="">충청권</a></li>
-                                <li><a href="">전라권</a></li>
-                                <li><a href="">경상/강원권</a></li>
+                                <li><a href="#">서울/경계권</a></li>
+                                <li><a href="#">충청권</a></li>
+                                <li><a href="#">전라권</a></li>
+                                <li><a href="#">경상/강원권</a></li>
                             </ul>
                         </li>
-                        <li><a href="">제주도</a>
+                        <li><a href="#">제주도</a>
                             <ul class="sub">
-                                <li><a href="">버스여행</a></li>
-                                <li><a href="">자유여행</a></li>
-                                <li><a href="">호텔/펜션</a></li>
-                                <li><a href=""></a></li>
+                                <li><a href="#">버스여행</a></li>
+                                <li><a href="#">자유여행</a></li>
+                                <li><a href="#">호텔/펜션</a></li>
+                                <li><a href="#"></a></li>
                             </ul>
                         </li>
-                        <li><a href="">렌터카</a>
+                        <li><a href="#">렌터카</a>
                             <ul class="sub">
-                                <li><a href="">국내 랜터카</a></li>
-                                <li><a href="">국외 렌터카</a></li>
-                                <li><a href=""></a>자료실</li>
-                                <li><a href=""></a></li>
+                                <li><a href="#">국내 랜터카</a></li>
+                                <li><a href="#">국외 렌터카</a></li>
+                                <li><a href="#">자료실</a></li>
+                                <li><a href="#"></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -134,15 +130,14 @@
                     <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
                     <img width="100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSAZGJa3JL_tuExpHiUNgjGIme5YxIxANJIhPsSJy3lm9SXj4fM1vQSKghUTJnnMWVXGU&usqp=CAU" alt="">
                 </div>
-
             </div>
             <div class="con3">바로가기</div>
         </section>
 
         <footer>
+            <div class="logo"></div>
             <div class="copy"></div>
-            <div class="foot"></div>
-            <div class="hoot"></div>
+            <div class="sns"></div>
         </footer>
     </div>
 
@@ -168,14 +163,28 @@
             배경.style.display = "none"
         })
     </script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
     <script>
+
+        const 메뉴 = $(".menu li")
+
+        메뉴.mouseover(function(){
+            $(this).children("ul").stop().slideDown()
+        })
+
+        메뉴.mouseout(function(){
+            $(this).children("ul").stop().slideUp()
+        })
+
         setInterval(function(){
             $(".slide-cover").animate({left: -1200}, 500).delay(1000)
             $(".slide-cover").animate({left: -2400}, 500).delay(1000)
             $(".slide-cover").animate({left: 0},500).delay(1000)
         },0)
     </script>
+
+    
 </body>
 </html>
